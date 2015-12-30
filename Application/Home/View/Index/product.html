@@ -217,22 +217,36 @@
             <span class="type">{$product_type[$product_info['product_type']]}</span>
         </div>
         <div class="ui-section-bd">
-            <div class="delivery">
-            <eq name="product_info['postage']" value="0">
-                <i class="ys-icon-free"></i>
-                <label>卖家包邮</label>
-                <span></span>
-            </eq>
-            <noempty name="product_info['baotui']">
-                <i class="ys-icon-tui"></i>
-                <label>{:get_baotui_list($product_info['baotui'])}</label>
-                <span></span>
-            </noempty>
-            <noempty name="product_info['baohuan']">
-                <i class="ys-icon-huan"></i>
-                <label>{:get_baohuan_list($product_info['baohuan'])}</label>
-                <span></span>
-            </noempty>
+            <div class="am-avg-sm-2 delivery">
+				
+                <eq name="product_info['postage']" value="0">
+					<li>
+						<i class="ys-icon-free"></i>
+						<label>卖家包邮</label>
+						<span></span>
+					</li>
+                </eq>
+                <notempty name="product_info['baotui']">
+					<li>
+						<i class="ys-icon-tui"></i>
+						<label>{:get_baotui_list($product_info['baotui'])}</label>
+						<span></span>
+					</li>
+                </notempty>
+                <notempty name="product_info['baohuan']">
+					<li>
+						<i class="ys-icon-huan"></i>
+						<label>{:get_baohuan_list($product_info['baohuan'])}</label>
+						<span></span>
+					</li>
+                </notempty>
+				<notempty name="product_info['user_info']['shop_auth']">
+					<li>
+						<i class="ys-icon-zheng"></i>
+						<label>商家认证</label>
+						<span></span>
+					</li>
+                </notempty>
             </div>
             <ul class="prices">
                 <!-- <li><label>保证金:</label><span class="money"><i>¥</i><em>{$product_info['bail_money']}</em></span></li> -->
@@ -271,22 +285,36 @@
             <span class="type">{$product_type[$product_info['product_type']]}</span>
         </div>
         <div class="ui-section-bd">
-            <div class="delivery">
+            <div class="am-avg-sm-2 delivery">
+				
                 <eq name="product_info['postage']" value="0">
-                    <i class="ys-icon-free"></i>
-                    <label>卖家包邮</label>
-                    <span></span>
+					<li>
+						<i class="ys-icon-free"></i>
+						<label>卖家包邮</label>
+						<span></span>
+					</li>
                 </eq>
-                <noempty name="product_info['baotui']">
-                    <i class="ys-icon-tui"></i>
-                    <label>{:get_baotui_list($product_info['baotui'])}</label>
-                    <span></span>
-                </noempty>
-                <noempty name="product_info['baohuan']">
-                    <i class="ys-icon-huan"></i>
-                    <label>{:get_baohuan_list($product_info['baohuan'])}</label>
-                    <span></span>
-                </noempty>
+                <notempty name="product_info['baotui']">
+					<li>
+						<i class="ys-icon-tui"></i>
+						<label>{:get_baotui_list($product_info['baotui'])}</label>
+						<span></span>
+					</li>
+                </notempty>
+                <notempty name="product_info['baohuan']">
+					<li>
+						<i class="ys-icon-huan"></i>
+						<label>{:get_baohuan_list($product_info['baohuan'])}</label>
+						<span></span>
+					</li>
+                </notempty>
+				<notempty name="product_info['user_info']['shop_auth']">
+					<li>
+						<i class="ys-icon-zheng"></i>
+						<label>商家认证</label>
+						<span></span>
+					</li>
+                </notempty>
             </div>
             <ul class="prices">
                 <li><label>秒杀价:</label><span class="money"><i>¥</i><em>{$product_info['range_price']}</em></span></li>
