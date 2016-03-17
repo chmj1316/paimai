@@ -249,21 +249,21 @@ class CronController extends IController {
             $this->_run();
             sleep(1);
         }
-        // $data = array(
-        //     'touser' => 'olEDawig2ZbRO2v2zBNoyxXB32SE',
-        //     'msgtype' => 'news',
-        //     'news' => array(
-        //         'articles' => array(
-        //             array(
-        //                 'title' => '定时执行提示',
-        //                 'description' => '执行时间：' .  date('Y-m-d H:i:s'),
-        //                 'url' => C('WEB_SITE_URL'),
-        //                 'picurl' => ''
-        //             )
-        //         )
-        //     )
-        // );
-        // $this->WX->sendCustomMessage($data);
+        $data = array(
+            'touser' => 'olEDawig2ZbRO2v2zBNoyxXB32SE',
+            'msgtype' => 'news',
+            'news' => array(
+                'articles' => array(
+                    array(
+                        'title' => '定时执行提示',
+                        'description' => '执行时间：' .  date('Y-m-d H:i:s'),
+                        'url' => C('WEB_SITE_URL'),
+                        'picurl' => ''
+                    )
+                )
+            )
+        );
+        $this->WX->sendCustomMessage($data);
         exit('结束'. PHP_EOL);
     }
 

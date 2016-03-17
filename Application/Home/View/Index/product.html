@@ -116,7 +116,7 @@
 				}
             },
         });
-		
+
 
     }
 </script>
@@ -218,32 +218,52 @@
         </div>
         <div class="ui-section-bd">
             <div class="am-avg-sm-2 delivery">
-				
                 <eq name="product_info['postage']" value="0">
 					<li>
 						<i class="ys-icon-free"></i>
-						<label>卖家包邮</label>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=2&sn=7bfaefbf35dd4fbd2c5283495664a67d#rd">卖家包邮</a></label>
 						<span></span>
 					</li>
                 </eq>
                 <notempty name="product_info['baotui']">
 					<li>
 						<i class="ys-icon-tui"></i>
-						<label>{:get_baotui_list($product_info['baotui'])}</label>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=6&sn=543752a926e03240c00e2d6a585b84b4#rd">{:get_baotui_list($product_info['baotui'])}</a></label>
 						<span></span>
 					</li>
                 </notempty>
                 <notempty name="product_info['baohuan']">
 					<li>
 						<i class="ys-icon-huan"></i>
-						<label>{:get_baohuan_list($product_info['baohuan'])}</label>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=8&sn=084100a897f40e33ceb08cff20b9d875#rd">{:get_baohuan_list($product_info['baohuan'])}</a></label>
+						<span></span>
+					</li>
+                </notempty>
+                <notempty name="product_info['zhengpin']">
+					<li>
+						<i class="ys-icon-zhengpin"></i>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=3&sn=b17796d6e822fe1ea4f9d614225768ca#rd">正品保证</a></label>
+						<span></span>
+					</li>
+                </notempty>
+                <notempty name="product_info['xianxing']">
+					<li>
+						<i class="ys-icon-xianxing"></i>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=4&sn=ed3c80f9f9cad037fd6d46682d84a1e3#rd">先行赔付</a></label>
+						<span></span>
+					</li>
+                </notempty>
+                <notempty name="product_info['danbao']">
+					<li>
+						<i class="ys-icon-danbao"></i>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=5&sn=55fe9ccfb2f4b0a2179e4cde4a2b6306#rd">担保服务</a></label>
 						<span></span>
 					</li>
                 </notempty>
 				<notempty name="product_info['user_info']['shop_auth']">
 					<li>
 						<i class="ys-icon-zheng"></i>
-						<label>商家认证</label>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=7&sn=3b7c0c76bc5e0b7984f2d15ffa1962e2#rd">实名认证</a></label>
 						<span></span>
 					</li>
                 </notempty>
@@ -286,32 +306,52 @@
         </div>
         <div class="ui-section-bd">
             <div class="am-avg-sm-2 delivery">
-				
                 <eq name="product_info['postage']" value="0">
 					<li>
 						<i class="ys-icon-free"></i>
-						<label>卖家包邮</label>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=2&sn=7bfaefbf35dd4fbd2c5283495664a67d#rd">卖家包邮</a></label>
 						<span></span>
 					</li>
                 </eq>
                 <notempty name="product_info['baotui']">
 					<li>
 						<i class="ys-icon-tui"></i>
-						<label>{:get_baotui_list($product_info['baotui'])}</label>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=6&sn=543752a926e03240c00e2d6a585b84b4#rd">{:get_baotui_list($product_info['baotui'])}</a></label>
 						<span></span>
 					</li>
                 </notempty>
                 <notempty name="product_info['baohuan']">
 					<li>
 						<i class="ys-icon-huan"></i>
-						<label>{:get_baohuan_list($product_info['baohuan'])}</label>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=8&sn=084100a897f40e33ceb08cff20b9d875#rd">{:get_baohuan_list($product_info['baohuan'])}</a></label>
+						<span></span>
+					</li>
+                </notempty>
+                <notempty name="product_info['zhengpin']">
+					<li>
+						<i class="ys-icon-zhengpin"></i>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=3&sn=b17796d6e822fe1ea4f9d614225768ca#rd">正品保证</a></label>
+						<span></span>
+					</li>
+                </notempty>
+                <notempty name="product_info['xianxing']">
+					<li>
+						<i class="ys-icon-xianxing"></i>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=4&sn=ed3c80f9f9cad037fd6d46682d84a1e3#rd">先行赔付</a></label>
+						<span></span>
+					</li>
+                </notempty>
+                <notempty name="product_info['danbao']">
+					<li>
+						<i class="ys-icon-danbao"></i>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=5&sn=55fe9ccfb2f4b0a2179e4cde4a2b6306#rd">担保服务</a></label>
 						<span></span>
 					</li>
                 </notempty>
 				<notempty name="product_info['user_info']['shop_auth']">
 					<li>
 						<i class="ys-icon-zheng"></i>
-						<label>商家认证</label>
+						<label><a href="http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275519&idx=7&sn=3b7c0c76bc5e0b7984f2d15ffa1962e2#rd">实名认证</a></label>
 						<span></span>
 					</li>
                 </notempty>

@@ -153,6 +153,9 @@ class ProductController extends IController {
                 'postage' => I('postage', 0, 'intval'),
                 'baotui' => I('baotui', 1, 'intval'),
                 'baohuan' => I('baohuan', 1, 'intval'),
+                'zhengpin' => I('zhengpin', 0, 'intval'),
+                'xianxing' => I('xianxing', 0, 'intval'),
+                'danbao' => I('danbao', 0, 'intval'),
                 'update_time' => NOW_TIME,
                 'status' => I('onsale', 0)
             );
