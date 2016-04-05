@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+        <title>个人中心</title>
+        <!--[if lt IE 9]>
+            <script src="__FENXIAO__jfsd/js/html5shiv.min.js"></script>
+            <script src="__FENXIAO__jfsd/js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/common.css" />
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/style.css" />
+        <script src="__FENXIAO__jfsd/js/jquery-1.9.1.min.js"></script>
+        <script src="__FENXIAO__jfsd/js/myjs.js"></script>
+    </head>
+
+    <body>
+        <!--header end-->
+        <section class="grzx_main auto">
+            <div class="grzx_main_top">
+                <dl class="fix">
+                    <dt>
+                        <p>
+                            <img src="{$user_info['user_avatar']}" alt="">
+        					<em><a href="{:U('index')}" title=""><img src="__FENXIAO__jfsd/images/bg2.png" alt=""></a></em>
+                        </p>
+                        <span><a href="{:U('index')}" title="">{:get_fx_group($user_info['fx_group'], 'name')}</a></span>
+                    </dt>
+                    <dd>
+                        会员ID ：{$user_info['user_id']}
+                        <br /> 昵称 ：{$user_info['user_name']}
+                        <br /> 推荐人：
+                        <?php echo empty($user_info['fx_sup'])?'中华聚宝':get_shop_info($user_info['user_avatar'])?>
+                        <a href="{:U('index')}" title=""><img src="__FENXIAO__jfsd/images/bg3.png" alt=""></a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="fxyj_main">
+                    <div class="fxyj_main_top">
+                        <ol>
+                            总收入：{$user_info['fx_count']}<br />
+                            当前：{$user_info['fx_money']}，可提：{$user_info['fx_money']}
+                        </ol>
+                        <ul><a href="{:U('tixian')}" title="">提现</a></ul>
+                    </div>
+                    <div class="fxyj_main_bottom">
+                        <ol class="fix">
+                            <li><a href="#" title="" class="xz">分销佣金</a></li>
+                            <li><a href="#" title="">佣金明细</a></li>
+                        </ol>
+                        <ul>
+                            <li class="fix">
+                                <p>
+                                    返现佣金：<em>￥31.92</em><br />
+                                    返现状态：已返现<br />
+                                    返现时间：2016/2/25  20:39:24<br />
+                                    订单编号：VSHop201602250839081<br />
+                                    订单时间：2016/2/25 20:39:24
+                                </p>
+                                <span>
+                                    <img src="images/bg38.png" alt="">
+                                    <em>情有独钟/85393140</em>
+                                </span>
+                            </li>
+                            <li class="fix">
+                                <p>
+                                    返现佣金：<em>￥31.92</em><br />
+                                    返现状态：已返现<br />
+                                    返现时间：2016/2/25  20:39:24<br />
+                                    订单编号：VSHop201602250839081<br />
+                                    订单时间：2016/2/25 20:39:24
+                                </p>
+                                <span>
+                                    <img src="images/bg38.png" alt="">
+                                    <em>情有独钟/85393140</em>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+        <include file="footer" />
+    </body>
+
+</html>

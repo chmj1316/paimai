@@ -1,0 +1,333 @@
+﻿                                                                                                          #UpDown {
+        }
+        .SelectTag { margin:8px;background:#EFEFEF;padding:10px 10px 5px 10px;clear:both}
+        .SelectTag li {clear:both;position:relative;min-height:30px;}
+        .SelectTag dt {position:absolute;top:3px;left:0px;width:70px; }
+        .SelectTag dl {margin-left:70px; }
+        .SelectTag dl a{display:inline-block;margin-right:5px;padding:3px 5px 3px 5px;min-width:20px;text-align:center}
+        .SelectTag dl .Current:link,.SelectTag dl .Current:visited{color:#FFFFFF;text-decoration:none; font-size:12px;font-weight:normal;background:#ff6a00;padding:3px 5px 3px 5px;min-width:20px;text-align:center}
+
+
+/*属性重置*/
+.wwrry{
+	margin:0;
+	padding:0;
+	font-weight: normal;
+	font-size: 12px;
+	text-decoration: none;
+	
+}
+i{
+	font-style: normal;
+}
+li,dt,dd{
+	list-style: none;
+}
+img{
+	border: none;
+	vertical-align:bottom;
+}
+/*公用样式开始*/
+hr{background: #e1e1e1;height: 3px;border: none;}
+.center{
+	width:95%;
+	margin: 0 auto;
+}
+.clear{zoom:1;}
+.clear:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.fl{float: left;}
+.fr{float:right;}
+/*公用样式结束*/
+
+/*
+**
+**待发货1
+**
+*/
+.dai_item{
+	height: 110px;
+	padding-top:1px; 
+}
+.dai_item_1{
+	background: #ea8340;
+}
+.dai_item h2{
+	margin-top: 16px;
+	margin-bottom: 8px;
+	font-size: 18px;
+}
+.dai_item p{
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+.dai_item_1 h2{
+	color: #fff;
+}
+.dai_item_1 p{
+	color: #fff;
+}
+.dai_item_2 h2{
+	color: #575757;
+}
+.dai_item_3 p{
+	color: #575757;
+}
+.spanj{
+	font-size: 14px;
+}
+.dai_photo{
+	border-top: 5px solid #e5e5e3;
+	border-bottom: 5px solid #e5e5e3;
+}
+.dai_photo a.a_a_chegngong{
+	display: block;
+	text-align: center;
+	background: #fc6665;
+	font-size: 15px;
+	color: #fff;
+	width: 120px;
+	height:35px;
+	line-height: 35px;
+	border-radius: 2px;
+	margin: 12px auto;
+}
+.dai_photo span{
+	color: #4a5abc;
+	padding-bottom: 10px;
+	display: block;
+}
+
+.dai_anjisuan{
+	padding-top: 16px;
+	border-bottom: 1px solid #e4e4e4;
+	padding-bottom: 16px;
+}
+.anjisuan{
+	font-size: 18px;
+	color: #686868;
+}
+.anjisuan_img{
+	width: 30px;
+	height: 20px;
+	margin-top: 2px;
+}
+.anjisuan_img img{
+	width: 100%;
+	height: inherit;
+}
+.anjisuan_jiage{
+	margin-top: 16px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #e4e4e4;
+}
+.anjisuan_img_box{
+	width: 30%;
+}
+.anjisuan_img_box img{
+	width: 90px;
+	height: 60px;
+}
+.anjisuan_1{
+	width: 58%;
+}
+.anjisuan_jiage_x1{
+	width: 12%;
+}
+.text_box{
+	margin-top: 12px;
+	padding-bottom:12px;
+	border-bottom: 1px solid #e4e4e4;
+}
+.text_box p{
+	color: #5b5b5b;
+	font-size: 16px;
+}
+.dai_kombg{
+	padding-bottom:12px;
+	border-bottom: 1px solid #e4e4e4;
+}
+.text_box_1{
+	border-bottom: none;
+}
+.font_fott{
+	height: 80px;
+}
+.font_fott a{
+	display: inline-block;
+	text-align: center;
+	width: 120px;
+	height: 35px;
+	border: 1px solid #e4e4e4;
+	color: #5f5f5f;
+	line-height: 35px;
+	border-radius: 5px;
+	font-size: 16px;
+	margin-right: 6px;
+}
+.font_fott a:last-child{
+	margin-right:0px;
+}
+.font_fott .font{
+	width: 254px;
+	margin: 12px auto;
+}
+.font_fott a.fon_on{
+	border: 1px solid red;
+	color: red;
+}
+.ul_a{
+	margin-top: 16px;
+	margin-bottom: 12px;
+}
+.ul_a li{
+	text-align: center;
+	float: left;
+}
+.ul_a li:nth-of-type(1){
+	width: 30%;
+	background: #6db046;
+	border-radius: 2px;
+	padding: 5px 0px;
+
+}
+.ul_a li:nth-of-type(1) a{
+	color: #fff;
+
+}
+.ul_a li:nth-of-type(2){
+	width: 25%;
+	margin-top: 5px;
+}
+.ul_a li:nth-of-type(3){
+	width: 20%;
+	margin-top: 5px;
+}
+.ul_a li:nth-of-type(4){
+	width: 25%;
+	margin-top: 5px;
+}
+.ul_a li:nth-of-type(4) a{
+	color: red;
+	margin-top: 5px;
+    
+}
+.ul_a > li > a
+{
+     white-space: nowrap;
+}
+
+.qiangQian h2{
+	text-align: center;
+	font-size: 18px;
+	color: #fe0000;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 6px;
+}
+.baise_qianjing{
+	background: #fff;
+	padding-top: 1px;
+}
+.baise_qianjing p{
+	font-size: 14px;
+	margin-bottom: 5px;
+	color: #585858;
+	line-height: 25px;
+}
+.baise_qianjing p:first-child{
+	margin-top: 12px;
+}
+.ide_opk .ide_a{
+	width: 90px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	background: #6cb146;
+	font-size: 14px;
+	border-radius: 2px;
+}
+.ide_opk{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+.ide_opk .ide_a_1{
+	background: #fd6766;
+}
+.ul_a_1{
+	padding-bottom: 16px;
+}
+.baise_qianjing_1{
+	margin-top: 16px;
+}
+.baise_qianjing .fonts_im_text{
+	color: #061c89;
+	text-align: center;
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 25px;
+}
+.baise_qianjing .ide_a_goumai{
+	background: #fd6766;
+	color: #fff;
+	font-size: 16px;
+	width: 160px;
+	height: 40px;
+	border-radius: 5px;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	margin: 0 auto;
+}
+.baise_qianjing a.fonts_im_text span{
+	display: inline-block;
+}
+.baise_qianjing a.fonts_im_text span:first-child{
+	color: #fd0100;
+	margin-left: 12px;
+}
+.baise_qianjing a.fonts_im_text{
+	display: block;
+}
+
+
+#guide{ position: fixed;	top:0;	left:0;	width:100%;	height:100%;background:rgba(0, 0, 0, 0.7);	display:none;z-index:20000;}
+
+#guide img {position: fixed;right: 18px;top:5px;width: 260px;height: 180px; z-index:20001;}
+
+/*2015.12.29pm*/
+.bg_blue{background: #fff;margin-top: 12px;}
+.bg_blue a{border-radius: 5px;display: block;text-align: center;color: #fff;background: #6CB146;width: 100px;padding: 3px 0;margin:10px auto; }
+.bg_blue a span{display: block;}
+
+.navBox-flex{
+	display: -webkit-flex;
+	display: -webkit-box;
+	display:flexbox;
+}
+.navBox-flex-fl{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+.nav-box-flex-width{	/*固定宽度*/
+		word-wrap: normal; /* for IE */
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+        color:#FFFFFF;
+}
+.bg{background: #76dfa5;margin-top: 12px;padding: 8px;}	
+.dai_photo_h2{color: #ff0000;font-size: 16px;margin-top: 8px;}	
+.dai_photo_h2>a{ color:#FFFFFF;}	
+.div11 img{width: 15px; height: 15px;margin:0 3px;}
+.div22 img{width: 15px; height: 15px;border-radius: 50%;margin-right: 3px;}
+.div11>a{font-size: 12px;color:#FFFFFF;}
+.div22{color: #ff0000;font-size: 12px;}

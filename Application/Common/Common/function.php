@@ -302,6 +302,51 @@ function get_category_type($type=''){
 }
 
 /**
+ * 获取分销商品类型
+ * @param string $group 类型
+ * @return string
+ */
+function get_fx_product_type($type=''){
+    $list = C('FX_PRODUCT_TYPE');
+    return $type ? $list[$type] : '';
+}
+
+/**
+ * 获取分销商品分类
+ * @param string $group 类型
+ * @return string
+ */
+function get_fx_product_cate($type=''){
+    $list = C('FX_PRODUCT_CATE');
+    return $type ? $list[$type] : '';
+}
+
+/**
+ * 获取分销等级
+ * @param string $type 配置类型
+ * @return string
+ */
+function get_fx_group($group = 0, $field = ''){
+    $list = S('FX_GROUP_LISTS');
+    if (empty($list)) {
+        $lists = M('FxGroup')->select();
+        foreach ($lists as $key => $value) {
+            $list[$value['id']] = $value;
+        }
+        S('FX_GROUP_LISTS', $list);
+    }
+    if ($group) {
+        if ($field) {
+            return $list[$group][$field];
+        } else {
+            return $list[$group];
+        }
+    } else {
+        return $list;
+    }
+}
+
+/**
  * 获取新闻图片尺寸
  * @param string $field 属性
  * @return string

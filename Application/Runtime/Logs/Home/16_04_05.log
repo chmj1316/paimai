@@ -1,0 +1,42 @@
+[ 2016-04-05T09:13:40+08:00 ] 124.202.246.198 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-04-05T09:16:27+08:00 ] 124.202.246.198 /Public/Fenxiao/js/Css.aspx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-05T09:16:27+08:00 ] 124.202.246.198 /Mall/Shop/Skin/Skin1/Images/Car.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+
+[ 2016-04-05T09:16:27+08:00 ] 124.202.246.198 /Mall/Shop/Skin/Skin1/Images/collect0.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+
+[ 2016-04-05T09:16:27+08:00 ] 124.202.246.198 /Mall/Shop/JS/Html/Product_End.js?t=27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+ERR: 无法加载控制器:Mall
+
+[ 2016-04-05T09:16:30+08:00 ] 180.153.206.29 /Public/Fenxiao/js/Css.aspx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+ERR: 无法加载控制器:Public
+

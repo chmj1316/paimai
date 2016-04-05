@@ -1,0 +1,23 @@
+﻿h1, h2, h3, h4, h5, h6, ul, li, form, div, p, img, dl, dt, dd { margin: 0px; padding: 0px; list-style: none; font-size: 1.4rem; font-family: arial,'宋体'; }
+a:link, a:visited { color: #333333; text-decoration: none; font-weight: normal; font-size: 1.4rem; outline: none 0px; }
+a:hover { color: #FF850E; text-decoration: none; font-weight: normal; font-size: 1.4rem; outline: none 0px; }
+html, body, form { margin: 0px; padding: 0px; font-size: 62.5%; color: #333333; font-family: arial,'宋体'; }
+img { border: 0 none; }
+
+.Split5 { height: 5px; clear: both; }
+.Split10 { height: 10px; clear: both; }
+.Split15 { height: 15px; clear: both; }
+.Split20 { height: 20px; clear: both; }
+.Split25 { height: 25px; clear: both; }
+.Split30 { height: 30px; clear: both; }
+.Split35 { height: 35px; clear: both; }
+.Split40 { height: 40px; clear: both; }
+.Split45 { height: 45px; clear: both; }
+.Split50 { height: 50px; clear: both; }
+.Split55 { height: 55px; clear: both; }
+.Split60 { height: 60px; clear: both; }
+.Split65 { height: 65px; clear: both; }
+.Split70 { height: 70px; clear: both; }
+.Split75 { height: 75px; clear: both; }
+.Split80 { height: 80px; clear: both; }
+.imgProductCart { height: 22px; width: 50px;}

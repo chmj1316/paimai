@@ -1,0 +1,64 @@
+<style media="screen">
+    .ms select {
+        padding:0px 10px;height:24px;border:solid 1px #d2d2d2;margin-right:10px; background:#fafafa
+    }
+    .select {width:400px;}
+    .text1{height:100px;}
+</style>
+
+<form action="" method="post">
+<table width="900" border="0" cellspacing="0" cellpadding="0" class="table">
+    <tr>
+        <td class="td1" align="right">等级名称：</td>
+        <td class="ms">
+            <input type="text" name="name" value="{$info['name']|default=''}" class="inputt input" />
+        </td>
+    </tr>
+    <tr>
+        <td class="td1" align="right">每天领取红包数：</td>
+        <td class="ms">
+            <input type="text" name="lqshu" value="{$info['lqshu']}" class="inputt input" />
+        </td>
+    </tr>
+    <tr>
+        <td class="td1" align="right">升级倍数：</td>
+        <td class="ms">
+            <input type="text" name="beishu" value="{$info['beishu']}" class="inputt input" />
+        </td>
+    </tr>
+    <tr>
+        <td class="td1" align="right">升级直推数：</td>
+        <td class="ms">
+            <input type="text" name="zhituishu" value="{$info['zhituishu']}" class="inputt input" />
+        </td>
+    </tr>
+    <tr>
+        <td class="td1" align="right">最小红包金额：</td>
+        <td class="ms">
+            <input type="text" name="min_price" value="{$info['min_price']}" class="inputt input" />
+        </td>
+    </tr>
+    <tr>
+        <td class="td1" align="right">最大红包金额：</td>
+        <td class="ms">
+            <input type="text" name="max_price" value="{$info['max_price']}" class="inputt input" />
+        </td>
+    </tr>
+    <tr>
+        <td class="td1" align="right">状态：</td>
+        <td class="ms">
+            <select class="select" name="status">
+                    <option value="1" <eq name="info['status']" value="1">selected="selected"</eq>>正常</option>
+                    <option value="0" <eq name="info['status']" value="0">selected="selected"</eq>>关闭</option>
+            </select>
+            （状态）
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+             <input type="hidden" name="id" value="{$info.id}">
+             <input type="submit" class="tjanniu cr" value="提 交" /><input type="reset" class="czanniu cr" value="重 置" />
+        </td>
+    </tr>
+</table>
+</form>

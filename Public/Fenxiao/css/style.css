@@ -1,0 +1,99 @@
+html,body,h1,h2,h3,h4,h5,h6,i,dl,dt,dd,span,li,ul,p,a,img,input,hr{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	font-weight: normal;
+	font-size: 1.2rem;
+	font-family: "Microsoft Yahei";
+}
+html{font-size: 62.5%;}
+body{font-size: 1.2rem;}
+i{
+	font-style: normal;
+}
+img{
+	border: none;
+	vertical-align: bottom;
+}
+a{text-decoration: none;}
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.clear{zoom:1;}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+    /*width:0px;*/
+}
+.wrapper{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+@font-face {
+	font-family: 'iconfont';
+    src: url('../icon/iconfont.eot'); /* IE9*/
+    src: url('../icon/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../icon/iconfont.woff') format('woff'),
+    url('../icon/iconfont.ttf') format('truetype'),
+    url('../icon/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.between{
+	height: 12px;
+	background: #f6f6f6;
+}
+.background{
+	background: #f6f6f6;
+}
+
+#boduy{
+	background: #f6f6f6;
+}
+.hr{
+	color: #ebebeb;
+	height: 1px;
+	background: #ebebeb;
+	border:none;
+}
+
+
+/*2015-10-10*/
+
+.ul_menu li{
+	float: left;	
+	width: 25%;
+	text-align: center;	
+}
+.ul_menu {
+	/*border: 1px solid #ccc;*/				/*修改时间11-20*/
+	border-top: 1px solid #e6e6e6;				/*修改时间11-20*/
+
+}
+.ul_menu li a{
+	color: #555555;	
+	width: 100%;
+	height: inherit;
+	display: block;
+	padding: 10px 0px;
+	border-right: 1px solid #e6e6e6;				/*修改时间11-20*/
+	border-bottom: 1px solid #e6e6e6;				/*修改时间11-20*/	
+
+}
+.menu_a_last .menu_a_last_h2{
+	visibility: hidden;
+}
+.menu_img{
+	margin-bottom: 5px;
+}
+
+
+
+/*
+**
+**
+**
+*/

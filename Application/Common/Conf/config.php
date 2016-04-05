@@ -12,9 +12,9 @@ return array(
 
 	/* 默认模块 */
     'DEFAULT_MODULE'    => 'Home',
-    'MODULE_ALLOW_LIST' => array('Home','Admin', 'Mobile'),
+    'MODULE_ALLOW_LIST' => array('Home','Admin', 'Fenxiao'),
     'MODULE_DENY_LIST'  => array('Common','Runtime'),
-    
+
 	/* 缓存 */
     'DATA_CACHE_COMPRESS' => true,
     'DATA_CACHE_PREFIX' => 'jfsd_',

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+        <title>排行榜</title>
+        <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/common.css" />
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/style.css" />
+        <script src="__FENXIAO__jfsd/js/jquery-1.9.1.min.js"></script>
+        <script src="__FENXIAO__jfsd/js/myjs.js"></script>
+    </head>
+
+    <body>
+        <!--<header class="grzx_header auto">个人中心<a href="javascript:history.go(-1);" title="">< 返回</a></header>-->
+        <!--header end-->
+        <section class="phb_main auto">
+            <ul>
+                <volist name="list" id="val">
+                    <li class="fix">
+                        <span>
+                    <dl class="fix">
+                        <dt><a href="javascript:void(0);"><img src="{$val['user_avatar']}" alt="{$val['user_name']}" width="108" height="108"></a></dt>
+                        <dd>
+                            <a href="javascript:void(0);">{$val['user_name']}</a>
+                            推荐人：{$val['fx_sup']}
+                            <p class="fix">
+                                <b>{:get_fx_group($val['fx_group'], 'name')}</b>
+                                <i>￥{$val['fx_count']}</i>
+                            </p>
+                        </dd>
+                    </dl>
+                </span>
+                        <em>{$i}</em>
+                    </li>
+                </volist>
+
+            </ul>
+            <ol>
+                <span>最多显示前100名...</span>
+            </ol>
+        </section>
+        <include file="footer" />
+    </body>
+
+</html>

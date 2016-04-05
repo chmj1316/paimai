@@ -1,0 +1,1742 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html, body, form {
+    margin: 0px;
+    padding: 0px;
+    font-size: 62.5%;
+    color: #333333;
+    font-family: arial,'宋体';
+    background: #fdfcfa;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li, form, div, p, img, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.4rem;
+    font-family: arial,'宋体';
+}
+
+a:link, a:visited {
+    color: #333333;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.4rem;
+    outline: none 0px;
+}
+
+a:hover {
+    color: #FF850E;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.4rem;
+    outline: none 0px;
+}
+
+img {
+    border: 0 none;
+}
+
+/* 首页顶部 */
+.personalid {
+    background: url(../images/gtoo.jpg) no-repeat center center;
+    width: 100%;
+    height: 182px;
+    background-size: auto 182px;
+}
+
+.pidbox {
+    width: 100%;
+    padding-top: 32px;
+    height: 150px;
+    text-align: center;
+}
+
+.pidboxmain {
+    width: 100%;
+    height: 100%;
+}
+
+p.pidpic {
+    background: url(../images/09_03.jpg) no-repeat;
+    background-size: 80px 80px;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px rgba(0,0,0,0.2);
+    margin: 0 auto;
+}
+
+.pidboxmain h1 {
+    font-size: 2.0rem;
+    padding: 10px 0 5px;
+    position: relative;
+}
+
+.pidboxmain span {
+    font-size: 1.2rem;
+    background: #ffce6d;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    padding: 1px 3px;
+    border-radius: 2px;
+}
+
+p.pidfix a {
+    color: #808080;
+}
+
+/* 分割 */
+.personcol {
+    width: 100%;
+    height: 2px;
+    background: #8757c3;
+}
+
+.personcol01 {
+    width: 33%;
+    float: left;
+    height: 100%;
+    background: #56c39b;
+}
+
+.personcol02 {
+    width: 33%;
+    float: left;
+    height: 100%;
+    background: #579ec3;
+}
+
+.personcol03 {
+    width: 33%;
+    float: left;
+    height: 100%;
+    background: #8757c3;
+}
+
+/* 个人中心功能 */
+
+.pidcontain {
+    width: 100%;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+}
+
+    .pidcontain ul {
+        margin: 0 0 10px;
+    }
+
+        .pidcontain ul li {
+            padding-bottom: 15px;
+            padding: 15px 15px;
+            border-bottom: 1px solid #cbc9c9;
+        }
+
+            .pidcontain ul li p {
+            }
+
+                .pidcontain ul li p a {
+                    width: 18px;
+                    float: left;
+                    height: 18px;
+                    background: url(../images/grzx01.png) no-repeat;
+                    background-size: 18px auto;
+                    font-size: 1.4rem !important;
+                    display: block;
+                }
+
+                .pidcontain ul li p label {
+                    font-size: 1.6rem;
+                    padding-left: 5px;
+                }
+
+            .pidcontain ul li span {
+                float: right;
+                background: url(../images/grzx02.png) no-repeat;
+                width: 22px;
+                height: 9px;
+                display: block;
+                background-size: 20px 18px;
+                margin-top: 3px;
+            }
+
+                .pidcontain ul li span.hiddenid {
+                    background-position: 0 bottom;
+                }
+
+            .pidcontain ul li p a.fengxiao {
+                background-position: 0 -18px;
+            }
+
+            .pidcontain ul li p a.fxshezhi {
+                background-position: 0 -36px;
+            }
+
+            .pidcontain ul li p a.dianping {
+                background-position: 0 -54px;
+            }
+
+            .pidcontain ul li p a.shouc {
+                background-position: 0 -72px;
+            }
+
+
+
+.myorder {
+    background: #fff;
+    box-shadow: 0px 2px 0px #e8e7e5;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #cbc9c9;
+    margin-top: 10px;
+}
+
+    .myorder p {
+        padding: 9px 0 0;
+        color: #6c6c6c;
+        font-size: 1.0rem;
+    }
+
+    .myorder h2 {
+        font-size: 1.8rem;
+    }
+
+.myorder01 {
+    width: 33%;
+    float: left;
+}
+
+.myorder02 {
+    width: 33%;
+    float: left;
+    border: 1px solid #cbc9c9;
+    border-top: 0;
+    border-bottom: 0;
+    height: 50px;
+}
+
+.myorder03 {
+    width: 33%;
+    float: left;
+}
+
+p.hiddenlink {
+    border-bottom: 1px solid #cbc9c9;
+    padding-bottom: 10px;
+}
+/* 快捷导航 */
+.buttomnav {
+    background: #f5f5f5;
+    border-top: 1px solid #e8e8e8;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+}
+
+    .buttomnav li {
+        width: 25%;
+        height: 50px;
+        float: left;
+        text-align: center;
+    }
+
+    .buttomnav a {
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        display: block;
+        background-repeat: no-repeat !important;
+        margin: 0px auto;
+        position: relative;
+        background: url(../images/grzx03.png) no-repeat;
+        background-size: auto 20px;
+    }
+
+        .buttomnav a:active {
+            background: url(../images/grzx04.png) no-repeat;
+        }
+
+    .buttomnav p {
+        font-size: 1.2rem;
+        display: block;
+        position: absolute;
+        height: 30px;
+        left: 0px;
+        bottom: 0px;
+        text-align: center;
+        width: 100%;
+        line-height: 30px;
+        color: #808095;
+    }
+
+    .buttomnav .back {
+        background-position: 15px 5px !important;
+    }
+
+
+    .buttomnav .back {
+        background-position: 15px 5px !important;
+    }
+
+    .buttomnav .home {
+        background-position: -23px 5px !important;
+    }
+
+    .buttomnav .shopping {
+        background-position: -63px 5px !important;
+    }
+
+    .buttomnav .grzx {
+        background-position: -100px 5px !important;
+    }
+
+/* 订单详情 待收货 */
+.detail {
+    background: #fff;
+    width: 100%;
+    box-shadow: 0px 3px 0px #e6e5e4;
+    height: auto;
+}
+
+    .detail h1 {
+        font-size: 1.5rem;
+        color: #fff;
+        line-height: 24px;
+    }
+
+    .detail p {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+.shouhuo {
+    background: #579ec3;
+    padding: 10px 15px;
+}
+
+.address {
+    padding: 10px 15px;
+}
+
+    .address h1 {
+        color: #575757;
+        font-size: 1.5rem;
+    }
+
+        .address h1 span {
+            float: right;
+            font-size: 1.5rem;
+        }
+
+    .address p {
+        font-size: 1.2rem;
+        color: #fff;
+        color: #575757;
+    }
+
+.detailgood {
+    padding: 10px 15px 7px;
+}
+
+.good {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    clear: both;
+    height: auto;
+}
+
+.name {
+    color: #575757;
+    margin-top: 5px;
+}
+
+    .name span {
+        display: block;
+        float: right;
+        width: 20px;
+        height: 12px;
+        background: url(../images/grzx02.png) no-repeat;
+        background-size: 20px 24px;
+    }
+
+.detailgood .dmain {
+}
+
+.goodbox {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+.goodpic {
+    width: 70px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.goodword {
+    margin: 0 60px 0 80px;
+    height: 100%;
+}
+
+    .goodword h3 {
+        font-size: 1.3rem;
+        color: #575757;
+    }
+
+    .goodword p {
+        font-size: 1.2rem;
+        color: #575757;
+    }
+
+.goodnum {
+    width: 60px;
+    text-align: right;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.souhuo {
+    clear: both;
+    text-align: right;
+}
+
+    .souhuo a {
+        padding: 3px;
+        border: 1px solid #575757;
+        margin-left: 5px;
+        border-radius: 3px;
+    }
+
+        .souhuo a.shenqing {
+            border: 1px solid red;
+            color: red;
+        }
+
+.price p {
+    font-size: 1.2rem;
+    color: #575757;
+    clear: both;
+}
+
+    .price p span {
+        float: right;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+        .price p span.tureprice {
+            color: red;
+        }
+
+.ddh p {
+    font-size: 1.2rem;
+    color: #575757;
+}
+
+.call {
+    color: #575757;
+}
+
+    .call span {
+        float: right;
+    }
+
+        .call span a {
+            padding: 3px;
+            border: 1px solid #575757;
+            border-radius: 3px;
+        }
+
+.doit {
+    background: #fff;
+    padding-top: 15px;
+    height: 35px;
+    border-top: 1px solid #cbc9c9;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+}
+
+    .doit a {
+        padding: 5px 15%;
+        border: 1px solid #cbc9c9;
+        margin: 3px;
+        border-radius: 5px;
+        font-size: 1.4rem;
+    }
+
+        .doit a.outstand {
+            color: red;
+            border: 1px solid red;
+        }
+/* 订单详情 已完成 */
+.yiwancheng {
+    background: #e9833f;
+    padding: 10px 15px;
+}
+
+.daifahuo {
+    background: #c3575c;
+    padding: 10px 15px;
+}
+/* 订单详情 点评 */
+.dianpin {
+    background: #56c39b;
+    width: 96%;
+    margin-left: 5px;
+}
+
+    .dianpin h1 {
+        font-size: 1.6rem;
+        line-height: 30px;
+    }
+/* 订单详情 待付款 */
+.daifuk {
+    background: #8757c3;
+    padding: 10px 15px;
+}
+
+/* 点评列表 */
+.title {
+    background: #56c39a;
+    padding: 2px 15px;
+    color: #fff;
+}
+
+    .title h1 {
+        font-size: 1.8rem;
+    }
+
+        .title h1 span {
+            font-size: 1.8rem;
+            float: right;
+        }
+
+    .title .mydingdan {
+        width: 95%;
+        height: 30px;
+        margin: 0 auto;
+    }
+
+        .title .mydingdan h2 {
+            width: 33%;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 1.4rem;
+            background: #80d1b3;
+            color: #2a8865;
+        }
+
+.mydingdan h2.dfk {
+    border-radius: 3px 0 0 3px;
+    background: #2a8865;
+    color: #fff;
+}
+
+.mydingdan h2.dfks {
+    border-radius: 3px 0 0 3px;
+}
+
+.mydingdan h2.dsh {
+    border-left: 0;
+}
+
+.mydingdan h2.dshs {
+    border-left: 0;
+    background: #2a8865;
+    color: #fff;
+}
+
+.mydingdan h2.sanji {
+    border-left: 0;
+}
+
+.mydingdan h2.sanjis {
+    border-left: 0;
+    background: #2a8865;
+    color: #fff;
+}
+
+.mydingdan h2.qbdd {
+    border-radius: 0 3px 3px 0;
+}
+
+.mydingdan h2.qbdds {
+    border-radius: 0 3px 3px 0;
+    background: #2a8865;
+    color: #fff;
+}
+
+.mydingdan h2.qbkh {
+    border-radius: 3px 0 0 3px;
+    width: 49%;
+    background: #2a8865;
+    color: #fff;
+}
+
+.mydingdan h2.zskh {
+    border-radius: 0 3px 3px 0;
+    width: 49%;
+}
+
+.mydingdan h2.fxdddzf {
+    border-radius: 3px 0 0 3px;
+    width: 49%;
+    background: #2a8865;
+    color: #fff;
+}
+
+.mydingdan h2.fxddywc {
+    border-radius: 0 3px 3px 0;
+    width: 49%;
+}
+
+.maincontain {
+    padding-bottom: 70px;
+}
+
+.mainbox {
+    border-bottom: 1px solid #e8e7e5;
+    height: 80px;
+    position: relative;
+}
+
+.mainboxleft {
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.mainboxpic {
+    width: 60px;
+    margin: 10px auto;
+    height: 60px;
+}
+
+.qbddgo {
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.mainboxbox {
+    margin: 0 70px 0 80px;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .mainboxbox .mainboxword {
+        padding: 20px 0;
+    }
+
+.mainboxword h1 {
+    overflow: hidden;
+    font-size: 1.6rem;
+    height: 2rem;
+}
+
+.mainboxword p {
+    font-size: 1.4rem;
+    color: #575757;
+    line-height: 20px;
+    height: 20rem;
+}
+
+.qbddgo span {
+    background: #56c39b;
+    float: right;
+    border-radius: 3px;
+    color: #fff;
+    width: 50px;
+    text-align: center;
+    height: 30px;
+    margin: 20px 10px 0 0;
+    line-height: 30px;
+}
+
+    .qbddgo span.xxddsh {
+        background: #579ec3;
+    }
+
+    .qbddgo span.xxddfk {
+        background: #8757c3;
+    }
+
+    .qbddgo span.xxddwc {
+        background: #e9833f;
+    }
+
+    .qbddgo span.xxddwfh {
+        background: #c3575c;
+    }
+
+    .qbddgo span.quxiao {
+        background: #cbc9c9;
+        color: #575757;
+    }
+
+
+
+/*添加新类       2015-11-20*/
+.qbddgooog span {
+    background: #bd99a7;
+}
+
+
+
+
+
+
+
+
+
+
+/* 全部客人 */
+.allcurstom {
+    width: 95%;
+    padding: 15px 2.5%;
+    height: auto;
+}
+
+    .allcurstom .allcbox {
+        width: 25%;
+        float: left;
+        height: 95px;
+        text-align: center;
+    }
+
+        .allcurstom .allcbox a {
+            width: 60px;
+            height: 60px;
+            background: url(../images/09_03.jpg) no-repeat;
+            background-size: 60px 60px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            box-shadow: 0px 3px 0px #e6e5e4;
+        }
+
+        .allcurstom .allcbox p {
+            font-size: 1.2rem;
+            width: 100%;
+            text-align: center;
+        }
+/* 直属客人 */
+.zhisukh {
+    width: 95%;
+    padding: 0px 2.5%;
+    height: auto;
+    height: 60px;
+    clear: both;
+}
+
+.zhisukhpic {
+    width: 42px;
+    background: url(../images/09_03.jpg) no-repeat;
+    background-size: 42px 42px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px #e6e5e4;
+    height: 42px;
+    float: left;
+}
+
+.zhisukhname {
+    min-width: 80%;
+    float: right;
+    border-bottom: 1px solid #e8e7e5;
+    height: 50px;
+}
+
+    .zhisukhname span {
+        float: right;
+        padding: 0 5px;
+        border-radius: 10px;
+        background: #ff9537;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .zhisukhname h1 {
+        font-size: 1.6rem;
+        line-height: 24px;
+    }
+
+    .zhisukhname p {
+        color: #575757;
+        font-size: 1.4rem;
+    }
+
+.zhisuzikh {
+    width: 80%;
+    padding: 0px 2.5%;
+    float: right;
+}
+
+.zhisukhziname {
+    min-width: 80%;
+    float: right;
+    border-bottom: 1px solid #e8e7e5;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+    .zhisukhziname span {
+        float: right;
+        padding: 0 5px;
+        border-radius: 10px;
+        background: #ff9537;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .zhisukhziname h1 {
+        font-size: 1.6rem;
+        line-height: 24px;
+    }
+
+    .zhisukhziname p {
+        color: #575757;
+        font-size: 1.4rem;
+    }
+
+/* 我的积分 */
+.wdjf {
+    background: #f4f4f4;
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 20px;
+    height: 55px;
+}
+
+.qian {
+    width: 55px;
+    height: 55px;
+    background: #56c39b;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    line-height: 55px;
+    float: left;
+}
+
+.feng {
+    width: 55px;
+    height: 55px;
+    background: #579ec3;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    line-height: 55px;
+    float: left;
+}
+
+.quan {
+    width: 55px;
+    height: 55px;
+    background: #8757c3;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    line-height: 55px;
+    float: left;
+}
+
+.wdjfword {
+    width: 70%;
+    float: right;
+    padding-right: 5%;
+    padding-top: 8px;
+}
+
+    .wdjfword h1 {
+        font-size: 2.0rem;
+    }
+
+        .wdjfword h1 span {
+            float: right;
+            background: #888;
+            color: #fff;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            padding: 0 2px;
+            margin-top: 9px;
+        }
+
+    .wdjfword p {
+        font-size: 1.2rem;
+    }
+/* 我的积分列表 */
+.wdzfth {
+    background: #f7f6f4;
+    width: 90%;
+    padding: 10px 5%;
+    height: 18px;
+    color: #575757;
+}
+
+.wdzftd01 {
+    width: 30%;
+    float: left;
+}
+
+.wdzftd02 {
+    width: 30%;
+    float: left;
+}
+
+.wdzftd03 {
+    width: 15%;
+    float: left;
+}
+
+.wdzftd04 {
+    width: 10%;
+    float: left;
+}
+
+.wdzftd05 {
+    width: 15%;
+    float: left;
+}
+
+.wdzftr {
+    width: 90%;
+    padding: 10px 5%;
+    height: 32px;
+    color: #575757;
+    border-bottom: 1px solid #e8e7e5;
+}
+
+.wdzftr01 {
+    width: 19%;
+    float: left;
+    font-size: 1.5rem;
+    line-height: 32px;
+}
+
+.wdzftr02 {
+    width: 40%;
+    float: left;
+    font-size: 1.0rem;
+    line-height: 32px;
+}
+
+.wdzftr03 {
+    width: 15%;
+    float: left;
+    background: url(../images/televison.png) no-repeat;
+    height: 30px;
+    background-size: auto 30px;
+}
+
+.wdzftr04 {
+    width: 10%;
+    float: left;
+    background: url(../images/beloved.png) no-repeat;
+    height: 20px;
+    background-size: auto 8px;
+    background-position: left 90%;
+}
+
+.wdzftr05 {
+    width: 15%;
+    float: left;
+    background: url(../images/09_03.jpg) no-repeat;
+    height: 30px;
+    background-size: auto 30px;
+}
+
+.wdzfsm {
+    background: #f8f4ea;
+    padding: 10px 15px;
+    color: #af954f;
+}
+/* 跳出框 */
+.window {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+}
+
+.outwindow {
+    width: 90%;
+    margin: 100px 5%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #575757;
+    padding: 10px 0;
+}
+
+.wdzfdetailtop {
+    width: 90%;
+    margin: 0 auto;
+}
+
+    .wdzfdetailtop h1 {
+        font-size: 1.5rem;
+    }
+
+    .wdzfdetailtop p {
+        font-size: 1.1rem;
+    }
+
+    .wdzfdetailtop h2 {
+        font-size: 1.1rem;
+    }
+
+.wdzfpic {
+    width: 50px;
+    height: 50px;
+    background: url(../images/09_03.jpg) no-repeat;
+    background-size: 50px 50px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px #cbc9c9;
+    float: left;
+    margin-right: 10px;
+}
+
+.wdzfword {
+    width: 50%;
+    float: left;
+}
+
+    .wdzfword h1 {
+        font-size: 1.5rem;
+    }
+
+    .wdzfword p {
+        font-size: 1.0rem;
+        color: #8c8c8c;
+    }
+
+.wdzfdetailbut {
+    clear: both;
+    padding: 15px;
+    background: #f8f4ea;
+}
+
+    .wdzfdetailbut h1 {
+        border-bottom: 1px dashed #575757;
+        font-size: 1.4rem;
+    }
+
+        .wdzfdetailbut h1 b {
+            color: red;
+            font-size: 1.6rem;
+        }
+
+        .wdzfdetailbut h1 span {
+            float: right;
+        }
+
+    .wdzfdetailbut p {
+        font-size: 1.2rem;
+        padding-top: 5px;
+        color: #8c8c8c;
+    }
+/* 推广应用 */
+.tgyy {
+    padding: 15px;
+}
+
+    .tgyy h1 {
+        font-size: 1.8rem;
+    }
+
+.tgyylink {
+    padding: 10px 0;
+}
+
+    .tgyylink h2 {
+        font-size: 1.4rem;
+        line-height: 24px;
+        color: #575757;
+    }
+
+    .tgyylink h3 {
+        border: 1px solid #cdcdcd;
+        height: 40px;
+        border-radius: 5px;
+        background: #fff;
+    }
+
+        .tgyylink h3 input {
+            float: right;
+            width: 60px;
+            height: 34px;
+            margin: 3px;
+            font-size: 1.2rem;
+            border: 1px solid #ddd;
+            color: #575757;
+        }
+
+    .tgyylink p {
+        color: #e08d20;
+        padding-top: 5px;
+        font-size: 1.2rem;
+    }
+
+.tgyygo {
+    background: #56c39b;
+    height: 45px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 45px;
+}
+
+    .tgyygo a {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+/* 分销订单 */
+.fxddth {
+    background: #f7f6f4;
+    width: 90%;
+    padding: 10px 5%;
+    height: 18px;
+    color: #575757;
+}
+
+.fxddtd01 {
+    width: 15%;
+    float: left;
+}
+
+.fxddtd02 {
+    width: 40%;
+    float: left;
+}
+
+.fxddtd03 {
+    width: 10%;
+    float: left;
+}
+
+.fxddtd04 {
+    width: 15%;
+    float: left;
+}
+
+.fxddtd05 {
+    width: 20%;
+    float: left;
+}
+
+.wdzftr {
+    width: 90%;
+    padding: 10px 5%;
+    height: 32px;
+    color: #575757;
+    border-bottom: 1px solid #e8e7e5;
+}
+
+.fxddtr01 {
+    width: 15%;
+    float: left;
+    height: 30px;
+}
+
+.fxddtr02 {
+    width: 40%;
+    float: left;
+}
+
+.wdzftr p {
+    font-size: 1.0rem;
+    overflow: hidden;
+    height: 1.4rem;
+}
+
+.fxddtr02 p {
+    width: 100%;
+}
+
+.wdzftr h1 {
+    font-size: 1.3rem;
+    overflow: hidden;
+    height: 1.4rem;
+}
+
+.fxddtr03 {
+    width: 10%;
+    float: left;
+    background: url(../images/beloved.png) no-repeat;
+    height: 20px;
+    background-size: auto 8px;
+    background-position: left 90%;
+}
+
+.fxddtr04 {
+    width: 15%;
+    float: left;
+    height: 30px;
+}
+
+.fxddtr05 {
+    width: 20%;
+    float: left;
+}
+
+/* 选择售后服务 */
+.thchose h1 {
+    padding: 15px;
+    border-bottom: 1px solid #e8e7e5;
+    font-size: 1.6rem;
+}
+
+    .thchose h1 span {
+        width: 20px;
+        height: 10px;
+        background: url(../images/grzx02.png) no-repeat;
+        -webkit-transform: rotate(90deg);
+        background-size: auto 20px;
+        background-position: 0 -10px;
+        margin-top: 6px;
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        display: block;
+        float: right;
+    }
+/* 仅退款选择 */
+.jtkchose {
+    padding: 15px;
+}
+
+    .jtkchose p {
+        padding: 15px;
+        background: #ebebeb;
+        font-size: 1.4rem;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+
+        .jtkchose p span {
+            margin-right: 5px;
+        }
+
+            .jtkchose p span input {
+                margin-right: 5px;
+                border: 0;
+                background: none;
+                font-size: 1.4rem;
+                color: #575757;
+                padding: 0;
+                margin: 0;
+            }
+
+            .jtkchose p span.xing {
+                color: red;
+            }
+
+    .jtkchose span.price02 {
+        color: red;
+    }
+
+/* 等待卖家处理 */
+.rebacknew {
+    padding: 15px;
+}
+
+.reback {
+    background: #ededed;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .reback h1 {
+        border-bottom: 1px solid #cbc9c9;
+        font-size: 1.6rem;
+        margin: 0 0 5px 0;
+    }
+
+        .reback h1 span {
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 2.4rem;
+        }
+
+    .reback p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+        .reback p span {
+            font-weight: bold;
+        }
+
+.waiting {
+    background: #56c39b;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+    .waiting h1 {
+        border-bottom: 1px solid #4ea786;
+        font-size: 1.6rem;
+        margin: 0 0 5px 0;
+        padding-bottom: 5px;
+    }
+
+    .waiting p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        padding-bottom: 5px;
+    }
+
+    .waiting h2 {
+        border-bottom: 1px solid #4ea786;
+        font-size: 1.2rem;
+        margin: 0 0 5px 0;
+        border-top: 1px solid #4ea786;
+        padding: 10px 0;
+    }
+
+    .waiting h3 {
+        font-size: 1.2rem;
+    }
+
+.agrre {
+    background: #fe7733;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+    .agrre h1 {
+        border-bottom: 1px solid #e76a2b;
+        font-size: 1.6rem;
+        margin: 0 0 5px 0;
+        padding-bottom: 5px;
+    }
+
+    .agrre p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        padding-bottom: 5px;
+    }
+
+        .agrre p input {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            padding-bottom: 5px;
+            display: inline-table;
+            width: 110px;
+            border: 1px solid #c14100;
+            color: #575757;
+        }
+
+    .agrre h2 {
+        border-bottom: 1px solid #e76a2b;
+        font-size: 1.2rem;
+        margin: 0 0 5px 0;
+        border-top: 1px solid #e76a2b;
+        padding: 10px 0;
+    }
+
+    .agrre h3 {
+        font-size: 1.2rem;
+    }
+/* 同意成功 */
+.sqcg h1 {
+    font-size: 2rem;
+    color: red;
+    margin: 10px 0 20px;
+    text-align: center;
+    background: #fffad8;
+    height: 40px;
+    line-height: 40px;
+}
+
+.sqcg h2 {
+    font-size: 1.6rem;
+}
+
+.sqcg p {
+    margin: 10px 0;
+}
+
+.wyly {
+    text-align: center;
+    border: 1px solid #b4b4b4;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+/* 佣金系统 */
+.yjxtpirsonbox {
+    height: 100px;
+    position: relative;
+}
+
+    .yjxtpirsonbox .yjxttopleft {
+        width: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    .yjxtpirsonbox .yjxttopright {
+        right: 0;
+        top: 0;
+        height: 100%;
+        margin: 0 15px 0 100px;
+    }
+
+.yjxtpic {
+    width: 70px;
+    height: 70px;
+    margin: 15px auto;
+    box-shadow: 0 3px 0px #cbc9c9;
+    border-radius: 5px;
+}
+
+.yjxtitle {
+    padding-top: 15px;
+}
+
+    .yjxtitle h1 {
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    .yjxtitle h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+.yjxtform {
+    height: auto;
+    overflow: auto;
+    clear: both;
+}
+
+.yjxtformbox {
+    width: 100%;
+    height: 40px;
+    background: #f7f6f4;
+    margin-bottom: 1px;
+    border-top: 1px solid #cbc9c9;
+}
+
+    .yjxtformbox p {
+        padding: 0 15px;
+        line-height: 40px;
+        font-size: 1.4rem;
+    }
+
+        .yjxtformbox p span {
+            float: right;
+            font-size: 1.6rem;
+        }
+
+        .yjxtformbox p b {
+            font-size: 1.0rem;
+            text-decoration: none;
+        }
+
+.yjxtbut {
+    height: 50px;
+    text-align: center;
+    clear: both;
+}
+
+    .yjxtbut a {
+        padding: 15px 20px;
+        margin: 0 5px;
+        border-radius: 3px;
+    }
+
+        .yjxtbut a.newnum {
+            border: 1px dashed #575757;
+        }
+
+        .yjxtbut a.yjxtsure {
+            background: #56c39b;
+            color: #fff;
+        }
+
+/* 填写银行信息 */
+.yhzhbox {
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #fff;
+    background: #f7f6f4;
+    width: 90%;
+    padding: 10px 5%;
+}
+
+    .yhzhbox h2 {
+        font-size: 1.4rem;
+    }
+
+    .yhzhbox h3 input {
+        font-size: 1.6rem;
+        border: 1px solid #cbc9c9;
+        height: 24px;
+        width: 40%;
+        box-shadow: none;
+        margin: 5px auto;
+        float: left;
+        margin-right: 5px;
+        border-radius: 3px;
+    }
+
+    .yhzhbox p {
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid #cbc9c9;
+        margin: 5px auto;
+        height: 30px;
+        background: #fff;
+    }
+
+        .yhzhbox p input {
+            height: 24px;
+            font-size: 1.6rem;
+            color: #575757;
+            border: 0;
+            background: none;
+            float: left;
+        }
+
+/* 新版首页顶部 */
+.personalid01 {
+    background: url(../images/grzxnewbg.jpg) no-repeat center center;
+    width: 100%;
+    height: 163px;
+    background-size: auto 163px;
+}
+
+.personaltop {
+    height: 95px;
+    position: relative;
+    width: 100%;
+}
+
+.personaltopleft {
+    width: 90px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+    .personaltopleft .personpic {
+        width: 60px;
+        height: 60px;
+        margin: 15px auto;
+    }
+
+.personaltopright {
+    height: 100%;
+    margin: 0 0 0 90px;
+    padding-top: 15px;
+}
+
+    .personaltopright h1 {
+        font-size: 2.0rem;
+        font-weight: 400;
+    }
+
+.personalbot {
+    background: rgba(0,0,0,0.2);
+    height: 68px;
+}
+
+.mynumber {
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+}
+
+    .mynumber p {
+        font-size: 1.6rem;
+    }
+
+    .mynumber h1 {
+        font-size: 2.0rem;
+        color: #fff04b;
+        text-shadow: 0px 1px 0px #575757;
+    }
+
+.personfix span {
+    font-size: 1.4rem;
+    background: #56c39b;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.personfix a {
+    float: right;
+    margin-right: 15px;
+}
+
+.pidcontain table {
+    border: 1px solid #cbc9c9;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5px;
+}
+
+    .pidcontain table td {
+        border: 1px solid #cbc9c9;
+        padding: 10px;
+    }
+
+/* 订单明细和分销明细 */
+table.ddmx {
+    border: 1px solid #fff;
+    background: #efefef;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    table.ddmx tr, td {
+        border: 1px solid #fff;
+    }
+
+    table.ddmx td {
+        padding: 5px;
+    }
+
+.ddmxpic {
+    width: 70px;
+    height: 50px;
+    border-radius: 3px;
+    float: left;
+    margin: 10px 10px 10px 10px;
+}
+
+.ddmxp {
+    margin: 10px 0 0 70px;
+}
+
+    .ddmxp p {
+        font-size: 1.4rem;
+    }
+
+        .ddmxp p span {
+            font-size: 1.2rem;
+        }
+
+    .ddmxp h2 {
+        font-size: 1.6rem;
+    }
+
+.ddmxprice p b {
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.ddmxprice p {
+    font-size: 1.4rem;
+    color: #000;
+    line-height: 2.0rem;
+}
+
+table.ddmx b {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.ddmxresult {
+    position: relative;
+    background: #efefef;
+    padding: 10px 15px;
+    color: #af954f;
+}
+
+.ddmxprice {
+    margin: 0 60px 0 0;
+}
+
+.ddmxperson {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 10px 15px;
+    text-align: center;
+}
+
+    .ddmxperson p {
+        font-size: 1.2rem;
+        padding-top: 65px;
+        color: #000;
+    }
+
+.fxmxtitle h1 {
+    background: #e5a751;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 1px;
+}
+
+.fxmxtitle p {
+    padding: 0px 15px;
+    height: 40px;
+    line-height: 40px;
+    background: #f8f4ea;
+    margin-top: 1px;
+}
+
+.ddmxtime {
+    clear: both;
+    padding: 0 10px 5px;
+}
+
+    .ddmxtime p {
+        font-size: 1.2rem;
+    }
+
+h1.ddmxbh {
+    padding: 5px 15px;
+    font-size: 1.4rem;
+    background: #fff;
+}
+.btn-ok {
+    display: block;
+    background: #56c39b; 
+    color: #fff !important; 
+    padding: 12px 30px; 
+    margin: 2px 5px; 
+    border-radius: 4px;
+}

@@ -10,7 +10,7 @@
 
 
 /*02页面的table部分*/
-.table1{ background:#d3d3d3;}
+.table1{/* background:#d3d3d3; */}
 .table1 td{padding:5px 0px; background:#f5f5f5;color:#1d2027}
 .table1 td.ts{padding:0px 20px}
 .table1 a.xga{color:#fff;line-height:22px;display:inline-block;margin:0px 5px;padding: 0 5px;background-color: #FF9B1A;border-radius: 3px;}
@@ -25,7 +25,7 @@
 .tablet span.sp4{width:84px}
 .tablet span.sp5{width:83px; position:absolute;top:0px;right:0px}
 
-.tableb{height:50px;background:#018296;width:908px;border:solid 1px #00d2da;}
+.tableb{height:50px;background:#018296;/* width:908px; */border:solid 1px #00d2da;}
 .tableb *{float:left;}
 .tableb input{margin-top:18px;margin-left:15px;margin-right:20px}
 .tableb input.scanniu{margin-top:12px;width:69px;height:25px; background:url(../images/shanchubj.png) no-repeat;border:0px;color:#ffffff; font-size:14px;margin-left:10px}
@@ -139,3 +139,5 @@ td.ts2 font{margin-left:35px;color:#08a3bb}
 .tablet1 span.sp22{width:340px}
 .tablet1 span.sp44{width:340px}
 .tablet1 span.sp66{width:181px; position:absolute;top:0px;right:0px}
+
+table {width:100%;}

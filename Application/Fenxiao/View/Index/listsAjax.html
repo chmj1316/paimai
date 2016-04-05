@@ -1,0 +1,14 @@
+<volist name="list" id="val">
+    <li>
+        <p>
+            <a href="{:U('product', array('id'=>$val['product_id']))}" title=""><img src="{:image($val['thumb'])}" alt=""></a>
+        </p>
+        <span>
+            <a href="{:U('product', array('id'=>$val['product_id']))}" title="{$val['product_name']}">{$val['product_name']}</a>
+            <em class="fix">
+                <b>￥{$val['xian_price']}</b>
+                <del>￥{$val['yuan_price']}</del>
+            </em>
+        </span>
+    </li>
+</volist>
