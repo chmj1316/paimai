@@ -4,7 +4,7 @@
     <head lang="en">
         <meta charset="UTF-8">
         <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
-        <title>网站首页</title>
+        <title><?php echo C('WEB_SITE_TITLE');?></title>
         <!--[if lt IE 9]>
         <script src="/Public/Fenxiao/jfsd/js/html5shiv.min.js"></script>
         <script src="/Public/Fenxiao/jfsd/js/respond.min.js"></script>
@@ -282,6 +282,55 @@
 					scrollLoad()
 	    		}
 	    	});
+        </script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+        <script>
+            var _shareInfo = {
+                title: '<?php echo C('WEB_SITE_TITLE');?>',
+                desc: '<?php echo C('WEB_SITE_DESCRIPTION');?>',
+                imgUrl: '<?php echo C('WEB_SITE_URL');?>/Public/Fenxiao/jfsd/images/logo.png',
+                link: '<?php echo U('index', array('share_uid'=>$user_info['user_id']));?>'
+            };
+        </script>
+        <script>
+            wx.config({
+                debug: <?php if(C('DEVELOP_MODE') == 1): ?>true<?php else: ?>false<?php endif; ?>,
+                appId: '<?php echo ($wx_config['appId']); ?>',
+                nonceStr: '<?php echo ($wx_config['nonceStr']); ?>',
+                timestamp: '<?php echo ($wx_config['timestamp']); ?>',
+                signature: '<?php echo ($wx_config['signature']); ?>',
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage', 'openLocation', 'getLocation', 'scanQRCode', 'openProductSpecificView', 'chooseWXPay']
+            });
+        </script>
+        <script>
+            wx.ready(function(){
+                wx.onMenuShareTimeline({
+                    title: _shareInfo.title, // 分享标题
+                    link: _shareInfo.link, // 分享链接
+                    imgUrl: _shareInfo.imgUrl, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                wx.onMenuShareAppMessage({
+                    title: _shareInfo.title, // 分享标题
+                    desc: _shareInfo.desc, // 分享描述
+                    link: _shareInfo.link, // 分享链接
+                    imgUrl: _shareInfo.imgUrl, // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+
+            });
         </script>
     </body>
 

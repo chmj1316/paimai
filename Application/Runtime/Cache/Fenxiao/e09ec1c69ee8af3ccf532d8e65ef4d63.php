@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="zh-CN">
 
     <head>
@@ -137,6 +137,7 @@
                 }
             }
         </style>
+        <script src="/Public/Fenxiao/jfsd/js/jquery-1.9.1.min.js"></script>
     </head>
 
     <body>
@@ -144,7 +145,7 @@
             <div class="hongbao">
                 <div class="topcontent">
                     <div class="avatar">
-                        <img src="__FENXIAO__jfsd/images/logo.png" alt="" width="144" height="144">
+                        <img src="/Public/Fenxiao/jfsd/images/logo.png" alt="" width="144" height="144">
                         <span id="close">+</span>
                     </div>
                     <h2>中华聚宝</h2>
@@ -160,9 +161,33 @@
             var oChai = document.getElementById("chai");
             var oClose = document.getElementById("close");
             var oContainer = document.getElementById("container");
-
+            var fag = true;
             oChai.onclick = function() {
-                oChai.setAttribute("class", "rotate");
+                if (fag) {
+                    $.ajax({
+                        type: 'post',
+                        dataType: 'json',
+                        beforeSend: function() {
+                            oChai.setAttribute("class", "rotate");
+                            fag = false;
+                        },
+                        success: function(rep) {
+                            fag = true;
+                            oChai.setAttribute("class", "");
+                            if (rep.status) {
+                                alert(rep.info);
+                                location.href = rep.url;
+                            } else {
+                                alert(rep.info);
+                            }
+                        },
+                        error: function() {
+                            fag = true;
+                            oChai.setAttribute("class", "");
+                            alert('网络异常...');
+                        }
+                    })
+                }
             }
             oClose.onclick = function() {
                 history.go(-1)
