@@ -30,6 +30,7 @@ class IController extends \Think\Controller {
     protected function _init() {
         //cookie('user_id', null);
         $user_id = cookie('user_id');
+        $user_id = 1;
         if ($user_id) {
             cookie('user_id', $user_id);
             $user_info = M('User')->find($user_id);

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+        <title>购物车</title>
+        <!--[if lt IE 9]>
+            <script src="__FENXIAO__jfsd/js/html5shiv.min.js"></script>
+            <script src="__FENXIAO__jfsd/js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/common.css" />
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/style.css" />
+        <script src="__FENXIAO__jfsd/js/jquery-1.9.1.min.js"></script>
+        <script src="__FENXIAO__jfsd/js/myjs.js"></script>
+        <script src="__FENXIAO__jfsd/js/swiper.min.js"></script>
+    </head>
+
+    <body>
+        <section class="gwc_main auto">
+            <div class="gwc_main_top">
+            <volist name="lists" id="val">
+                <dl class="fix" data-id="{$key}">
+                    <dt><a href="#" title=""><img src="{:thumb($val['thumb'], 155, 207)}" alt=""></a></dt>
+                    <dd>
+                        <a href="#" title="">{:msubstr($val['product_name'], 0, 12)}</a>
+                        <p class="fix">
+                            <span>价格：<em>￥{$val['xian_price']}</em></span>
+                            <span>小计：<em>￥{$val['xian_price'] * $val['num']}</em></span>
+                        </p>
+                        <div class="z_jiajian fix">
+                            <div class="z_jian z_szanniu z_fs16 tc fl">-</div>
+                            <div class="z_shu fl tc" data-num="1">
+                                <input type="text" class="z_shu_input z_fs16 tc" value="{$val['num']}">
+                            </div>
+                            <div class="z_jia z_szanniu z_fs16 tc fl">+</div>
+                        </div>
+                        <div class="gb">
+                            <a href="javascript:void(0);" title=""><img src="__FENXIAO__jfsd/images/bg49.png" alt=""></a>
+                        </div>
+                    </dd>
+                </dl>
+            </volist>
+            </div>
+            <div class="gwc_main_bottom fix">
+                <ol>合计：<span>￥{$count_price}</span></ol>
+                <ul><a href="{:U('Flow/submit')}" title="">提交订单</a></ul>
+            </div>
+        </section>
+        <script type="text/javascript">
+            $(".z_jia").bind('click', function(){
+                var product_id = $(this).closest("dl").data('id');
+                $.ajax({
+                    url: '{:U('Flow/add')}',
+                    data: {product_id: product_id, num: 1},
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.status) {
+                            location.href = '{:U('Flow/index')}'
+                        } else {
+                            alert(res.info)
+                        }
+                    },
+                    error: function(){
+                        alert('网络异常...')
+                    }
+                })
+            })
+            $(".z_jian").bind('click', function(){
+                var product_id = $(this).closest("dl").data('id');
+                $.ajax({
+                    url: '{:U('Flow/add')}',
+                    data: {product_id: product_id, num: -1},
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.status) {
+                            location.href = '{:U('Flow/index')}'
+                        } else {
+                            alert(res.info)
+                        }
+                    },
+                    error: function(){
+                        alert('网络异常...')
+                    }
+                })
+            })
+            $(".gb").bind('click', function(){
+                var product_id = $(this).closest("dl").data('id');
+                $.ajax({
+                    url: '{:U('Flow/del')}',
+                    data: {product_id: product_id},
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.status) {
+                            location.href = '{:U('Flow/index')}'
+                        } else {
+                            alert(res.info)
+                        }
+                    },
+                    error: function(){
+                        alert('网络异常...')
+                    }
+                })
+            })
+        </script>
+    </body>
+
+</html>

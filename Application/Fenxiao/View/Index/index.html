@@ -4,7 +4,7 @@
     <head lang="en">
         <meta charset="UTF-8">
         <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
-        <title>网站首页</title>
+        <title>{:C('WEB_SITE_TITLE')}</title>
         <!--[if lt IE 9]>
         <script src="__FENXIAO__jfsd/js/html5shiv.min.js"></script>
         <script src="__FENXIAO__jfsd/js/respond.min.js"></script>
@@ -23,12 +23,11 @@
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="__FENXIAO__jfsd/images/banner1.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="__FENXIAO__jfsd/images/banner2.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="__FENXIAO__jfsd/images/banner1.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="__FENXIAO__jfsd/images/banner2.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="__FENXIAO__jfsd/images/banner1.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="__FENXIAO__jfsd/images/banner2.jpg" width="640" height="340" alt=""></div>
+                <volist name=":get_banner(6)" id="val">
+                    <div class="swiper-slide">
+                        <a href="{$val['url']}"><img src="{:thumb($val['image'], 640, 340)}" width="640" height="340" alt="{$val['title']}"></a>
+                    </div>
+                </volist>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -47,72 +46,23 @@
         <section class="index_main auto">
             <div class="index_main_top">
                 <div class="index_main_top1">
-                    <ul class="fix">
-                        <li>
-                            <p>
-                                <a href="javascript:void(0);" class="showCateName"><img src="__FENXIAO__jfsd/images/bg25.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:void(0);" title="">商品分类</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg26.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">购物车</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg27.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">论坛</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="{:U('User/index')}" title=""><img src="__FENXIAO__jfsd/images/bg28.png" alt=""></a>
-                            </p>
-                            <span><a href="{:U('User/index')}" title="">个人中心</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg29.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">一元购</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg30.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">积分商城</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg31.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">秒杀</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg32.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">拍卖</a></span>
-                        </li>
-                    </ul>
+                    <include file="nav" />
                 </div>
                 <div class="index_main_top2">
                     <div class="bd fix">
                         <ol class="fix"><img src="__FENXIAO__jfsd/images/bg34.png" alt=""> 聚宝快讯：</ol>
                         <ul class="infoList">
-                            <li>热门1 <a href="#" title="">1买南红就找中华聚宝，您信得过的品牌！</a></li>
-                            <li>热门2 <a href="#" title="">2买南红就找中华聚宝，您信得过的品牌！</a></li>
-                            <li>热门3 <a href="#" title="">3买南红就找中华聚宝，您信得过的品牌！</a></li>
+                            <volist name=":get_banner(7)" id="val">
+                                <li><a href="{$val['url']}" title="{$val['title']}">{$val['title']}</a></li>
+                            </volist>
                         </ul>
                     </div>
                     <div class="bd fix">
                         <ol class="fix"><img src="__FENXIAO__jfsd/images/bg34.png" alt=""> 聚宝快讯：</ol>
                         <ul class="infoList">
-                            <li>热门1 <a href="#" title="">1买南红就找中华聚宝，您信得过的品牌！</a></li>
-                            <li>热门2 <a href="#" title="">2买南红就找中华聚宝，您信得过的品牌！</a></li>
-                            <li>热门3 <a href="#" title="">3买南红就找中华聚宝，您信得过的品牌！</a></li>
+                            <volist name=":get_banner(8)" id="val">
+                                <li><a href="{$val['url']}" title="{$val['title']}">{$val['title']}</a></li>
+                            </volist>
                         </ul>
                     </div>
                     <script type="text/javascript">
@@ -145,10 +95,11 @@
                     </volist>
                 </ul>
                 <ol>
-                    <a href="#" title=""><img src="__FENXIAO__jfsd/images/pic6.jpg" alt=""></a>
+                    <volist name=":get_banner(9)" id="val">
+                        <a href="{$val['url']}" title="{$val['title']}"><img src="{:thumb($val['image'], 600, 133)}" alt="{$val['title']}"></a>
+                    </volist>
                 </ol>
-                <ul class="fix" id="item-lists">
-                </ul>
+                <ul class="fix" id="item-lists"></ul>
                 <dl id="loading">
                     <dt><img src="__FENXIAO__jfsd/images/jiazai.gif" alt=""></dt>
                     <dd>正在加载...</dd>
@@ -156,56 +107,7 @@
             </div>
         </section>
         <section class="index_xf auto">
-            <ul class="fix">
-                <li>
-                    <p>
-                        <a href="javascript:void(0);" class="showCateName"><img src="__FENXIAO__jfsd/images/bg25.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:ShowCateName()" title="">商品分类</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg26.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">购物车</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg27.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">论坛</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="{:U('User/index')}" title=""><img src="__FENXIAO__jfsd/images/bg28.png" alt=""></a>
-                    </p>
-                    <span><a href="{:U('User/index')}" title="">个人中心</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg29.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">一元购</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg30.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">积分商城</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg31.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">秒杀</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="__FENXIAO__jfsd/images/bg32.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">拍卖</a></span>
-                </li>
-            </ul>
+            <include file="nav" />
         </section>
         <!---->
         <div id="CateName" class="CateName">
@@ -292,6 +194,55 @@
 					scrollLoad()
 	    		}
 	    	});
+        </script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+        <script>
+            var _shareInfo = {
+                title: '{:C('WEB_SITE_TITLE')}',
+                desc: '{:C('WEB_SITE_DESCRIPTION')}',
+                imgUrl: '{:C('WEB_SITE_URL')}__FENXIAO__jfsd/images/logo.png',
+                link: '{:U('index', array('share_uid'=>$user_info['user_id']))}'
+            };
+        </script>
+        <script>
+            wx.config({
+                debug: <if condition="C('DEVELOP_MODE') == 1">true<else />false</if>,
+                appId: '{$wx_config['appId']}',
+                nonceStr: '{$wx_config['nonceStr']}',
+                timestamp: '{$wx_config['timestamp']}',
+                signature: '{$wx_config['signature']}',
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage', 'openLocation', 'getLocation', 'scanQRCode', 'openProductSpecificView', 'chooseWXPay']
+            });
+        </script>
+        <script>
+            wx.ready(function(){
+                wx.onMenuShareTimeline({
+                    title: _shareInfo.title, // 分享标题
+                    link: _shareInfo.link, // 分享链接
+                    imgUrl: _shareInfo.imgUrl, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                wx.onMenuShareAppMessage({
+                    title: _shareInfo.title, // 分享标题
+                    desc: _shareInfo.desc, // 分享描述
+                    link: _shareInfo.link, // 分享链接
+                    imgUrl: _shareInfo.imgUrl, // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+
+            });
         </script>
     </body>
 

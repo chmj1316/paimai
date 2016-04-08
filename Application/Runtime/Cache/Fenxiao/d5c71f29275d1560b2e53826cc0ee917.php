@@ -23,12 +23,9 @@
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/Public/Fenxiao/jfsd/images/banner1.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="/Public/Fenxiao/jfsd/images/banner2.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="/Public/Fenxiao/jfsd/images/banner1.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="/Public/Fenxiao/jfsd/images/banner2.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="/Public/Fenxiao/jfsd/images/banner1.jpg" width="640" height="340" alt=""></div>
-                    <div class="swiper-slide"><img src="/Public/Fenxiao/jfsd/images/banner2.jpg" width="640" height="340" alt=""></div>
+                <?php $_result=get_banner(6);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><div class="swiper-slide">
+                        <a href="<?php echo ($val['url']); ?>"><img src="<?php echo thumb($val['image'], 640, 340);?>" width="640" height="340" alt="<?php echo ($val['title']); ?>"></a>
+                    </div><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -48,71 +45,68 @@
             <div class="index_main_top">
                 <div class="index_main_top1">
                     <ul class="fix">
-                        <li>
-                            <p>
-                                <a href="javascript:void(0);" class="showCateName"><img src="/Public/Fenxiao/jfsd/images/bg25.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:void(0);" title="">商品分类</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg26.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">购物车</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg27.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">论坛</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="<?php echo U('User/index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg28.png" alt=""></a>
-                            </p>
-                            <span><a href="<?php echo U('User/index');?>" title="">个人中心</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg29.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">一元购</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg30.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">积分商城</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg31.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">秒杀</a></span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg32.png" alt=""></a>
-                            </p>
-                            <span><a href="javascript:alert('完事开发中...')" title="">拍卖</a></span>
-                        </li>
-                    </ul>
+    <li>
+        <p>
+            <a href="javascript:void(0);" class="showCateName"><img src="/Public/Fenxiao/jfsd/images/bg25.png" alt=""></a>
+        </p>
+        <span><a href="javascript:void(0);" title="">商品分类</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="<?php echo U('Flow/index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg26.png" alt=""></a>
+        </p>
+        <span><a href="<?php echo U('Flow/index');?>" title="">购物车</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg27.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">论坛</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="<?php echo U('User/index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg28.png" alt=""></a>
+        </p>
+        <span><a href="<?php echo U('User/index');?>" title="">个人中心</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg29.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">一元购</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg30.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">积分商城</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg31.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">秒杀</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg32.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">拍卖</a></span>
+    </li>
+</ul>
+
                 </div>
                 <div class="index_main_top2">
                     <div class="bd fix">
                         <ol class="fix"><img src="/Public/Fenxiao/jfsd/images/bg34.png" alt=""> 聚宝快讯：</ol>
                         <ul class="infoList">
-                            <li>热门1 <a href="#" title="">1买南红就找中华聚宝，您信得过的品牌！</a></li>
-                            <li>热门2 <a href="#" title="">2买南红就找中华聚宝，您信得过的品牌！</a></li>
-                            <li>热门3 <a href="#" title="">3买南红就找中华聚宝，您信得过的品牌！</a></li>
+                            <?php $_result=get_banner(7);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($val['url']); ?>" title="<?php echo ($val['title']); ?>"><?php echo ($val['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
                     <div class="bd fix">
                         <ol class="fix"><img src="/Public/Fenxiao/jfsd/images/bg34.png" alt=""> 聚宝快讯：</ol>
                         <ul class="infoList">
-                            <li>热门1 <a href="#" title="">1买南红就找中华聚宝，您信得过的品牌！</a></li>
-                            <li>热门2 <a href="#" title="">2买南红就找中华聚宝，您信得过的品牌！</a></li>
-                            <li>热门3 <a href="#" title="">3买南红就找中华聚宝，您信得过的品牌！</a></li>
+                            <?php $_result=get_banner(8);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($val['url']); ?>" title="<?php echo ($val['title']); ?>"><?php echo ($val['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
                     <script type="text/javascript">
@@ -143,10 +137,9 @@
                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
                 <ol>
-                    <a href="#" title=""><img src="/Public/Fenxiao/jfsd/images/pic6.jpg" alt=""></a>
+                    <?php $_result=get_banner(9);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><a href="<?php echo ($val['url']); ?>" title="<?php echo ($val['title']); ?>"><img src="<?php echo thumb($val['image'], 600, 133);?>" alt="<?php echo ($val['title']); ?>"></a><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ol>
-                <ul class="fix" id="item-lists">
-                </ul>
+                <ul class="fix" id="item-lists"></ul>
                 <dl id="loading">
                     <dt><img src="/Public/Fenxiao/jfsd/images/jiazai.gif" alt=""></dt>
                     <dd>正在加载...</dd>
@@ -155,55 +148,56 @@
         </section>
         <section class="index_xf auto">
             <ul class="fix">
-                <li>
-                    <p>
-                        <a href="javascript:void(0);" class="showCateName"><img src="/Public/Fenxiao/jfsd/images/bg25.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:ShowCateName()" title="">商品分类</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg26.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">购物车</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg27.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">论坛</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="<?php echo U('User/index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg28.png" alt=""></a>
-                    </p>
-                    <span><a href="<?php echo U('User/index');?>" title="">个人中心</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg29.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">一元购</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg30.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">积分商城</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg31.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">秒杀</a></span>
-                </li>
-                <li>
-                    <p>
-                        <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg32.png" alt=""></a>
-                    </p>
-                    <span><a href="javascript:alert('完事开发中...')" title="">拍卖</a></span>
-                </li>
-            </ul>
+    <li>
+        <p>
+            <a href="javascript:void(0);" class="showCateName"><img src="/Public/Fenxiao/jfsd/images/bg25.png" alt=""></a>
+        </p>
+        <span><a href="javascript:void(0);" title="">商品分类</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="<?php echo U('Flow/index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg26.png" alt=""></a>
+        </p>
+        <span><a href="<?php echo U('Flow/index');?>" title="">购物车</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg27.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">论坛</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="<?php echo U('User/index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg28.png" alt=""></a>
+        </p>
+        <span><a href="<?php echo U('User/index');?>" title="">个人中心</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg29.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">一元购</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg30.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">积分商城</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg31.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">秒杀</a></span>
+    </li>
+    <li>
+        <p>
+            <a href="javascript:alert('完事开发中...')" title=""><img src="/Public/Fenxiao/jfsd/images/bg32.png" alt=""></a>
+        </p>
+        <span><a href="javascript:alert('完事开发中...')" title="">拍卖</a></span>
+    </li>
+</ul>
+
         </section>
         <!---->
         <div id="CateName" class="CateName">

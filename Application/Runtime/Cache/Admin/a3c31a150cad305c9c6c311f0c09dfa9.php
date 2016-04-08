@@ -82,7 +82,6 @@
 		<td align="center"><input type="checkbox" class="allcheck">订单ID</td>
 		<td align="center">购买用户</td>
 		<td align="center">价格</td>
-		<td align="center">状态</td>
 		<td align="center">更新时间</td>
 		<td align="center">状态</td>
 		<td align="center">操作</td>
@@ -92,7 +91,7 @@
 			<td align="center"><?php echo ($v['user_id']); ?></td>
 			<td align="center"><?php echo ($v['price']); ?></td>
 			<td align="center"><?php echo date('Y-m-d H:i:s', $v['update_time']);?></td>
-			<td align="center"><?php echo ($v['status']?'正常':'关闭'); ?></td>
+			<td align="center"><?php echo ($v['status_text']); ?></td>
 			<td align="center">
 				<a href="<?php echo U('edit',array('order_id'=>$v['order_id']));?>" class="xga">修改</a>|
 				<a href="javascript:if(confirm('确认要执行该操作吗?')){location.href='<?php echo U('del?order_id='. $v['order_id']);?>'}" class="xga">删除</a>

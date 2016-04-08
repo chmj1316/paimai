@@ -19,22 +19,7 @@
         <!--header end-->
         <section class="grzx_main auto">
             <div class="grzx_main_top">
-                <dl class="fix">
-                    <dt>
-                        <p>
-                            <img src="{$user_info['user_avatar']}" alt="">
-        					<em><a href="{:U('index')}" title=""><img src="__FENXIAO__jfsd/images/bg2.png" alt=""></a></em>
-                        </p>
-                        <span><a href="{:U('index')}" title="">{:get_fx_group($user_info['fx_group'], 'name')}</a></span>
-                    </dt>
-                    <dd>
-                        会员ID ：{$user_info['user_id']}
-                        <br /> 昵称 ：{$user_info['user_name']}
-                        <br /> 推荐人：
-                        <?php echo empty($user_info['fx_sup'])?'中华聚宝':get_shop_info($user_info['user_avatar'])?>
-                        <a href="{:U('index')}" title=""><img src="__FENXIAO__jfsd/images/bg3.png" alt=""></a>
-                    </dd>
-                </dl>
+                <include file="header" />
             </div>
             <div class="fxyj_main">
                 <div class="fxyj_main_top">
@@ -59,14 +44,14 @@
                                     订单编号：{$val['order_id']}<br>
                                     订单时间：{:date('Y/m/d H:i:s', $val['create_time'])}
                                 </p>
-                                <span>
+                                <!-- <span>
                                     <img src="images/bg38.png" alt="">
                                     <em>情有独钟/85393140</em>
-                                </span>
+                                </span> -->
                             </li>
                         </volist>
                     </ul>
-                    <ul>
+                    <ul style="display:none;">
                         <volist name="lists2" id="val">
                             <li class="fix">
                                 <p>

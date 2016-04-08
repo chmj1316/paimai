@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+        <title>个人中心</title>
+        <!--[if lt IE 9]>
+            <script src="__FENXIAO__jfsd/js/html5shiv.min.js"></script>
+            <script src="__FENXIAO__jfsd/js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/common.css" />
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/style.css" />
+        <script src="__FENXIAO__jfsd/js/jquery-1.9.1.min.js"></script>
+        <script src="__FENXIAO__jfsd/js/myjs.js"></script>
+    </head>
+
+    <body>
+        <!--header end-->
+        <section class="grzx_main auto">
+            <div class="grzx_main_top">
+                <include file="header" />
+            </div>
+            <div class="yjkh_main">
+                <div class="yjkh_main_top">
+                    <ul class="fix">
+                        <li><a href="{:U('fenxiaoShow', array('level'=>1))}" <eq name="level" value="1">class="xz"</eq>>一级</a></li>
+                        <li><a href="{:U('fenxiaoShow', array('level'=>2))}" <eq name="level" value="2">class="xz"</eq>>二级</a></li>
+                        <li><a href="{:U('fenxiaoShow', array('level'=>3))}" <eq name="level" value="3">class="xz"</eq>>三级</a></li>
+                    </ul>
+                </div>
+                <div class="yjkh_main_bottom">
+                    <ul>
+                    <volist name="fenxiao[$level]['items']" id="val">
+                        <li class="fix">
+                            <p><a href="javascript:void(0);"><img src="{$val['user_avatar']}"></a></p>
+                            <span>
+                                <a href="javascript:void(0);">{$val['user_name']}/{$val['user_id']}</a>
+                                等级：{$val['fx_group']}<em>{:get_fx_group($val['fx_group'], 'name')}</em>
+                            </span>
+                        </li>
+                    </volist>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <include file="footer" />
+    </body>
+
+</html>

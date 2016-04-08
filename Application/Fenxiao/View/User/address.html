@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+        <title>收货地址</title>
+        <!--[if lt IE 9]>
+            <script src="__FENXIAO__jfsd/js/html5shiv.min.js"></script>
+            <script src="__FENXIAO__jfsd/js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/common.css" />
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/style.css" />
+        <script src="__FENXIAO__jfsd/js/jquery-1.9.1.min.js"></script>
+        <script src="__FENXIAO__jfsd/js/myjs.js"></script>
+    </head>
+
+    <body>
+        <section class="shdz_main auto">
+            <volist name="lists" id="val">
+                <div class="shdz_main_nr">
+                    <ol>
+                        <span>{$val['consign_name']}<em>{$val['mobile']}</em></span>
+                        <volist name=":json_decode($val['area'], true)" id="area">
+                            {$area}&nbsp;
+                        </volist>
+                        {$val['address']}
+                    </ol>
+                    <ul class="fix">
+                        <li>
+                            <a href="{:U('address', array('type'=>3, 'address_id'=>$val['address_id']))}" title=""><img src="__FENXIAO__jfsd/images/bg41.png" alt=""> 删除</a>
+                        </li>
+                        <li>
+                            <a href="{:U('address', array('type'=>2, 'address_id'=>$val['address_id']))}" title=""><img src="__FENXIAO__jfsd/images/bg40.png" alt=""> 修改</a>
+                        </li>
+                        <empty name="val['is_default']">
+                        <li>
+                            <a href="javascript:setDefault({$val['address_id']});" title=""><img src="__FENXIAO__jfsd/images/bg40.png" alt=""> 设置默认</a>
+                        </li>
+                        </empty>
+                    </ul>
+                </div>
+            </volist>
+            <section class="xinzeng auto">
+                <a href="{:U('address', array('type'=>1))}" title="">+ 新增收货地址</a>
+            </section>
+        </section>
+        <script type="text/javascript">
+            var setDefault = function(address_id){
+                $.ajax({
+                    url: '{:U('address', array('type'=>4))}',
+                    data: {'address_id': address_id},
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.status) {
+                            // alert(res.info)
+                            location.href = res.url
+                        } else {
+                            alert(res.info)
+                        }
+                    },
+                    error: function(){
+                        alert('网络异常...')
+                    }
+                })
+            }
+        </script>
+    </body>
+
+</html>

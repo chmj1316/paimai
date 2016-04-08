@@ -17,17 +17,12 @@
                  if(res.err_msg == "get_brand_wcpay_request:ok")
                  {
                      //支付成功
-                     //  alert('支付成功');
-                     <if condition="$user_info['user_id'] == 1 || $user_info['user_id'] == 2">
-                        location.href = '{:U('Order/index', array('order_id'=>$order_id))}';
-                     <else />
-                        location.href = '{:U('Order/index', array('order_id'=>$order_id))}';
-                     </if>
+                    location.href = '{:U('Order/show', array('order_id'=>$order_id))}';
                  }
                  else if(res.err_msg == "get_brand_wcpay_request:cancel")
                  {
                      //取消支付
-                     location.href = '{:U('Order/index', array('order_id'=>$order_id))}';
+                    location.href = '{:U('Order/show', array('order_id'=>$order_id))}';
                  }
                  else
                  {

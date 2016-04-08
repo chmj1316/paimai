@@ -34,6 +34,7 @@
             </ul>
         </section>
         <!--foot start-->
+<div style="height:120px;"></div>
 <footer class="dbnr_main auto">
     <ul class="fix">
         <li>
@@ -43,13 +44,13 @@
             </a>
         </li>
         <li>
-            <a href="#" title="">
+            <a href="<?php echo U('Order/index');?>" title="">
                 <img src="/Public/Fenxiao/jfsd/images/bg8.png" alt="">
                 <span>我的订单</span>
             </a>
         </li>
         <li>
-            <a href="#" title="">
+            <a href="<?php echo U('Flow/index');?>" title="">
                 <img src="/Public/Fenxiao/jfsd/images/bg9.png" alt="">
                 <span>购物车</span>
             </a>

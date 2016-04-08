@@ -1,5 +1,5 @@
 <?php
-namespace Home\Controller;
+namespace Fenxiao\Controller;
 class WxJsApiController extends \Think\Controller {
 
 
@@ -22,20 +22,20 @@ class WxJsApiController extends \Think\Controller {
 
         $unifiedOrder = new \UnifiedOrder_pub();
 
-        $order_info = M('Order')->find($order_id);
-        $order_info['product_name'] = get_product_info($order_info['product_id']);
+        $order_info = M('FxOrder')->find($order_id);
+        $order_info['product_name'] = '中华聚宝分销商城';
         $unifiedOrder->setParameter("openid", $openid);//商品描述
-        $unifiedOrder->setParameter("body", $order_info['product_name']);//商品描述
+        $unifiedOrder->setParameter("body", '中华聚宝分销商城共消费￥' . $order_info['price']);//商品描述
         //自定义订单号，此处仅作举例
         $timeStamp = time();
         $out_trade_no = \WxPayConf_pub::APPID.$timeStamp;
         $unifiedOrder->setParameter("out_trade_no", $order_id . '_' . mt_rand(100,999));//商户订单号
         if ($openid == 'olEDawig2ZbRO2v2zBNoyxXB32SE' || $openid == 'olEDawtGeisOHSSa539SCY68xqNc') {
-            $unifiedOrder->setParameter("total_fee", ($order_info['price'] + $order_info['postage']));//总金额
+            $unifiedOrder->setParameter("total_fee", $order_info['price']);//总金额
         } else {
-            $unifiedOrder->setParameter("total_fee", ($order_info['price'] + $order_info['postage'])*100);//总金额
+            $unifiedOrder->setParameter("total_fee", $order_info['price']*100);//总金额
         }
-        $unifiedOrder->setParameter("notify_url", \WxPayConf_pub::NOTIFY_URL);//通知地址
+        $unifiedOrder->setParameter("notify_url", \WxPayConf_pub::NOTIFY_URL_FX);//通知地址
         $unifiedOrder->setParameter("trade_type", "JSAPI");//交易类型
         //非必填参数，商户可根据实际情况选填
         // $unifiedOrder->setParameter("sub_mch_id","XXXX");//子商户号
@@ -57,6 +57,7 @@ class WxJsApiController extends \Think\Controller {
         $this->assign('order_id', $order_id);
         $this->display();
     }
+
     public function test($order_id = ''){
         vendor('WxPayPubHelper.WxPayPubHelper');
         //使用jsapi接口
@@ -76,16 +77,20 @@ class WxJsApiController extends \Think\Controller {
 
         $unifiedOrder = new \UnifiedOrder_pub();
 
-        $order_info = M('Order')->find($order_id);
-        $order_info['product_name'] = get_product_info($order_info['product_id']);
+        $order_info = M('FxOrder')->find($order_id);
+        $order_info['product_name'] = '中华聚宝分销商城';
         $unifiedOrder->setParameter("openid", $openid);//商品描述
-        $unifiedOrder->setParameter("body", $order_info['product_name']);//商品描述
+        $unifiedOrder->setParameter("body", '中华聚宝分销商城共消费￥' . $order_info['price']);//商品描述
         //自定义订单号，此处仅作举例
         $timeStamp = time();
         $out_trade_no = \WxPayConf_pub::APPID.$timeStamp;
         $unifiedOrder->setParameter("out_trade_no", $order_id . '_' . mt_rand(100,999));//商户订单号
-        $unifiedOrder->setParameter("total_fee", ($order_info['price'] + $order_info['postage'])*100);//总金额
-        $unifiedOrder->setParameter("notify_url", \WxPayConf_pub::NOTIFY_URL);//通知地址
+        if ($openid == 'olEDawig2ZbRO2v2zBNoyxXB32SE' || $openid == 'olEDawtGeisOHSSa539SCY68xqNc') {
+            $unifiedOrder->setParameter("total_fee", $order_info['price']);//总金额
+        } else {
+            $unifiedOrder->setParameter("total_fee", $order_info['price']*100);//总金额
+        }
+        $unifiedOrder->setParameter("notify_url", \WxPayConf_pub::NOTIFY_URL_FX);//通知地址
         $unifiedOrder->setParameter("trade_type", "JSAPI");//交易类型
         //非必填参数，商户可根据实际情况选填
         // $unifiedOrder->setParameter("sub_mch_id","XXXX");//子商户号
@@ -147,59 +152,15 @@ class WxJsApiController extends \Think\Controller {
                 //此处应该更新一下订单状态，商户自行增删操作
                 log_result($log_name,"【支付成功】:\n".$xml."\n");
                 list($order_id) = explode('_', $notify->data['out_trade_no']);
-                $order_info = M('Order')->where(array('order_id'=>$order_id))->find();
-                $order_info['product_name'] = get_product_info($order_info['product_id']);
+                $order_info = M('FxOrder')->where(array('order_id'=>$order_id))->find();
                 if ($order_info && $order_info['status'] == 1) {
-                    $options = array(
-                        'appid' => \WxPayConf_pub::APPID, //填写高级调用功能的app id
-                        'appsecret' => \WxPayConf_pub::APPSECRET //填写高级调用功能的密钥
-                    );
-                    $WX = new \Vendor\TPWechat($options);
-                    // 给客户发
-                    $end_time = strtotime('+3 day');
-                    $temp = array(
-                        'touser' => get_shop_info($order_info['user_id'], 'openid'),
-                        'template_id' => 'hIPbD2pnKDr-oUt5LdR3tFlAn2WaFdLi8KTRzSrvgH0',
-                        'url' => \WxPayConf_pub::JS_API_CALL_URL . U('Order/index', array('order_id'=>$order_id)),
-                        'topcolor' => '#FF0000',
-                        'data' => array (
-                            'first' => array (
-                              'value' => '你好，【'. $order_info['product_name'] .'】订单已经完成支付',
-                            ),
-                            'keyword1' => array (
-                              'value' => $order_info['order_id'],
-                            ),
-                            'keyword2' => array (
-                              'value' => '支付成功（等待卖家发货）',
-                              'color' => '#FF0000',
-                            ),
-                            'keyword3' => array (
-                              'value' => $order_info['product_name'],
-                            ),
-                            'remark' => array (
-                              'value' => '违约有效期：' . date('Y-m-d H:i:s', $end_time),
-                            ),
-                        ),
-                    );
-                    $WX->sendTemplateMessage($temp);
-                    // 给商家发
-                    $temp['touser'] = get_shop_info($order_info['shop_id'], 'openid');
-                    $temp['data']['first']['value'] = '你好，【'. $order_info['product_name'] .'】订单已经完成支付,请尽快发货';
-                    $WX->sendTemplateMessage($temp);
                     // 更新支付状态
                     $data = array(
+                        'pay_status' => 1,
                         'status' => 2,
-                        'update_time' => NOW_TIME,
-                        'end_time' => $end_time
+                        'update_time' => NOW_TIME
                     );
-                    M('Order')->where(array('order_id'=>$order_info['order_id']))->save($data);
-                    $data = array(
-                        'action' => 1,
-                        'order_id' => $notify->data['out_trade_no'],
-                        'fee' => $notify->data['total_fee'],
-                        'time' => NOW_TIME
-                    );
-                    M('Pay_log')->add($data);
+                    M('FxOrder')->where(array('order_id'=>$order_info['order_id']))->save($data);
                 }
 
             }

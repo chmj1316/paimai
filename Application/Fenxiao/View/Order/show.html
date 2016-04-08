@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+		<title>已完成</title>
+		<!--[if lt IE 9]>
+	    	<script src="__FENXIAO__jfsd/js/html5shiv.min.js"></script>
+	    	<script src="__FENXIAO__jfsd/js/respond.min.js"></script>
+	    <![endif]-->
+		<link rel="stylesheet" href="__FENXIAO__jfsd/css/common.css" />
+		<link rel="stylesheet" href="__FENXIAO__jfsd/css/style.css" />
+		<script src="__FENXIAO__jfsd/js/jquery-1.9.1.min.js"></script>
+		<script src="__FENXIAO__jfsd/js/myjs.js"></script>
+	</head>
+
+	<body>
+		<section class="ywc_main auto">
+			<div class="ywc_main_top">
+				<ol>
+					<span>{$info['status_text']}</span> 订单金额（含运费）：￥{$info['price']}
+					<br /> 运费：￥0
+				</ol>
+				<ul>
+					<span><em>收货人：{$info['consign']['consign_name']}</em>13912341234</span> 收货地址：{$info['consign']['province']}-{$info['consign']['city']}-{$info['consign']['area']}-{$info['consign']['address']}
+				</ul>
+			</div>
+			<div class="ywc_main_center">
+				<ul>
+				<volist name="info['order_info']['cart']" id="val">
+					<li class="fix">
+						<p><img src="{:thumb($val['thumb'],136,136)}" alt="{$val['product_name']}"></p>
+						<span><a href="#" title="">{$val['product_name']}</a></span>
+						<em>
+		                	￥ {$val['xian_price']}<br />
+		                    *{$val['num']}
+		                </em>
+					</li>
+				</volist>
+				</ul>
+				<dl>
+					订单编号：{$info['order_id']}<br>
+					成交时间：{:date('Y-m-d H:i:s', $info['create_time'])}<br>
+					备注信息：{$info['order_info']['content']|default='无'}
+				</dl>
+				<ol>
+					快递公司：{$info['order_info']['duaidi']['gs']|default='无'}
+					<br> 快递单号：{$info['order_info']['duaidi']['dh']|default='无'}
+					<br> 商家留言：{$info['order_info']['duaidi']['ly']|default='无'}
+					<br>
+				</ol>
+			</div>
+			<div class="ywc_main_bottom">
+				<a href="javascript:history.go(-1);" title="返回">返回</a>
+				<switch name="info['status']">
+					<case value="1"><a href="{:U('WxJsApi/index', array('order_id'=>$info['order_id']))}" class="xz">立即付款</a></case>
+					<case value="2"><a href="javascript:alert('等待商家发货处理...');" class="xz">待发货</a></case>
+					<case value="3">
+						<a id="sign" href="javascript:void(0);">确认签收</a>
+						<script>
+						$(function(){
+							$("#sign").bind('click', function(){
+								$.get('{:U('Order/sign', array('order_id'=>$info['order_id']))}', function(res){
+									if (res.status) {
+										alert(res.info)
+										location.reload()
+									} else {
+										alert(res.info)
+									}
+								})
+							})
+						})
+						</script>
+					</case>
+					<case value="4"><a href="{:U('index')}" class="xz">再购买</a></case>
+					<default />
+					<a href="javascript:alert('已作废...');" class="xz">已作废</a>
+				</switch>
+			</div>
+		</section>
+	</body>
+
+</html>

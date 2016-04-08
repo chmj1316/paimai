@@ -1,0 +1,1311 @@
+[ 2016-04-07T16:35:02+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Index&a=deleteCache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001145s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000942s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001060s ]
+
+[ 2016-04-07T16:35:05+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Banner&a=dList&bid=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `jfsd_banner` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_banner_data` WHERE `bid` = 6 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`bid`,`title`,`description`,`url`,`image`,`video`,`sort` FROM `jfsd_banner_data` WHERE `bid` = 6 ORDER BY sort desc, id desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015341s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2016-04-07T16:35:34+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Banner&a=dEdit&id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0047s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_banner` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012356s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-04-07T16:35:34+08:00 ] 101.226.51.228 /index.php?m=Admin&c=Banner&a=dEdit&id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001124s ]
+
+[ 2016-04-07T16:35:34+08:00 ] 101.226.51.228 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2016-04-07T16:37:48+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Banner&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0043s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_banner` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`type`,`name`,`allow_image`,`allow_url`,`allow_desc`,`width`,`height`,`sort` FROM `jfsd_banner` ORDER BY sort desc, id desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2016-04-07T16:39:51+08:00 ] 180.153.201.217 /index.php?m=Admin&c=Banner&a=edit&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+
+[ 2016-04-07T16:39:51+08:00 ] 180.153.201.217 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2016-04-07T16:39:52+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Banner&a=edit&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0051s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `jfsd_banner` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: images E:\phpStudy\WWW\yuyingbo\paimai\Application\Admin\Controller\BannerController.class.php 第 149 行.
+SQL: SHOW COLUMNS FROM `jfsd_category` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`pid`,`title`,`english`,`type`,`childid`,`image`,`description`,`setting`,`display`,`sort` FROM `jfsd_category` ORDER BY sort asc, id asc  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: tree E:\phpStudy\WWW\yuyingbo\paimai\Application\Admin\Model\CategoryModel.class.php 第 78 行.
+NOTIC: [2] unlink(./Application/Runtime/Temp/jfsd_1c68ad3e11fa9a4422de3da4ebe041ef.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory E:\phpStudy\WWW\yuyingbo\paimai\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\phpStudy\WWW\yuyingbo\paimai\Application\Admin\Model\CategoryModel.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000960s ]
+
+[ 2016-04-07T16:39:57+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Banner&a=edit&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0023s ]
+SQL: UPDATE `jfsd_banner` SET `name`='分销-首页-推荐下面',`type`='2',`allow_image`='1',`allow_url`='1',`allow_desc`='0',`width`='600',`height`='133',`sort`='0' WHERE `id` = 9 [ RunTime:0.1221s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002284s ]
+
+[ 2016-04-07T16:39:59+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Banner&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0047s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_banner` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`type`,`name`,`allow_image`,`allow_url`,`allow_desc`,`width`,`height`,`sort` FROM `jfsd_banner` ORDER BY sort desc, id desc LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013842s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000951s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2016-04-07T16:49:21+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxProduct&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0038s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_product` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_product` [ RunTime:0.0035s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_product` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `product_id`,`product_type`,`product_cate`,`product_name`,`product_desc`,`thumb`,`images`,`content`,`jifen_price`,`xian_price`,`yuan_price`,`view`,`product_num`,`create_time`,`update_time`,`status`,`position_1`,`sort` FROM `jfsd_fx_product` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0004s ]
+SQL: SHOW FULL COLUMNS FROM jfsd_fx_product [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined index: product_type E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 60 行.
+NOTIC: [8] Undefined index: product_type E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 60 行.
+NOTIC: [8] Undefined index: product_cate E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 65 行.
+NOTIC: [8] Undefined index: product_cate E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 65 行.
+NOTIC: [8] Undefined index: product_cate E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 65 行.
+NOTIC: [8] Undefined index: product_cate E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2016-04-07T16:49:21+08:00 ] 180.153.211.190 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+
+[ 2016-04-07T16:49:21+08:00 ] 180.153.211.190 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.092048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2016-04-07T16:49:22+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0056s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000923s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000974s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001206s ]
+
+[ 2016-04-07T16:50:24+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0039s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016364s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001066s ]
+
+[ 2016-04-07T17:04:29+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0089s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2016-04-07T17:04:45+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0069s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0075s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001747s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001861s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001784s ]
+
+[ 2016-04-07T17:05:39+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013196s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000751s ]
+
+[ 2016-04-07T17:10:42+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0046s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0035s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001215s ]
+
+[ 2016-04-07T17:11:21+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0052s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` >= 0 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000932s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000913s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2016-04-07T17:11:41+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` >= 0 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026544s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001481s ]
+
+[ 2016-04-07T17:12:00+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Config&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0084s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `jfsd_config` [ RunTime:0.0079s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `jfsd_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2016-04-07T17:12:01+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Config&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0029s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jfsd_config` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `jfsd_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017714s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
+
+[ 2016-04-07T17:12:03+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Config&a=index&id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0087s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `jfsd_config` [ RunTime:0.0074s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `jfsd_config` WHERE `status` = 1 AND `group` = 6 ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001158s ]
+
+[ 2016-04-07T17:14:43+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Config&a=save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002059s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0094s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `jfsd_config` [ RunTime:0.0051s ]
+SQL: UPDATE `jfsd_config` SET `value`='1:10%
+2:6%
+3:3%' WHERE `name` = 'FEIXIAO_BILI' [ RunTime:0.1341s ]
+SQL: UPDATE `jfsd_config` SET `value`='399' WHERE `name` = 'HONG_BAO_BASE' [ RunTime:0.0360s ]
+SQL: UPDATE `jfsd_config` SET `value`='1:分销商品
+2:积分商品' WHERE `name` = 'FX_PRODUCT_TYPE' [ RunTime:0.0326s ]
+SQL: UPDATE `jfsd_config` SET `value`='1:分类一
+2:分类二
+3:分类三
+4:分类四' WHERE `name` = 'FX_PRODUCT_CATE' [ RunTime:0.0326s ]
+SQL: UPDATE `jfsd_config` SET `value`='1:待付款
+2:待发货
+3:待签收
+4:已完成' WHERE `name` = 'FX_ORDER_STATUS' [ RunTime:0.0326s ]
+SQL: UPDATE `jfsd_config` SET `value`='0' WHERE `name` = 'FENXIAO_JIFEN_ALLOW' [ RunTime:0.0329s ]
+SQL: UPDATE `jfsd_config` SET `value`='0.1' WHERE `name` = 'FEIXIAO_JIFEN_BILI' [ RunTime:0.0328s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001018s ]
+
+[ 2016-04-07T17:14:45+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Config&a=index&id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+SQL: SHOW COLUMNS FROM `jfsd_config` [ RunTime:0.0082s ]
+SQL: SELECT `type`,`name`,`value` FROM `jfsd_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jfsd_config` [ RunTime:0.0038s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `jfsd_config` WHERE `status` = 1 AND `group` = 6 ORDER BY sort  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-04-07T17:16:57+08:00 ] 180.153.206.34 /index.php?m=Admin&c=Account&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+
+[ 2016-04-07T17:16:57+08:00 ] 180.153.206.34 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-04-07T17:16:58+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Account&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0049s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jfsd_tixian` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `jfsd_tixian` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_tixian` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`user_id`,`money`,`create_time`,`update_time`,`status` FROM `jfsd_tixian` WHERE `status` >= 0 ORDER BY status asc, id desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 59 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 61 行.
+SQL: SHOW COLUMNS FROM `jfsd_user` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 8 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 8 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 76 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 76 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 174 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 174 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 90 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 90 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 86 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 86 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 23 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 23 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2016-04-07T17:17:03+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001547s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000436s ]
+SQL: select version() as v; [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002957s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003121s ]
+
+[ 2016-04-07T17:17:04+08:00 ] 124.202.246.198 /index.php?m=Admin&c=Account&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001359s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0045s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jfsd_tixian` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `jfsd_tixian` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_tixian` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`user_id`,`money`,`create_time`,`update_time`,`status` FROM `jfsd_tixian` WHERE `status` >= 0 ORDER BY status asc, id desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 59 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 61 行.
+SQL: SHOW COLUMNS FROM `jfsd_user` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 8 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 8 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 76 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 76 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 174 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 174 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 90 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 90 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 86 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 86 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 26 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 26 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 23 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 23 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001274s ]
+
+[ 2016-04-07T17:17:05+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxProduct&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0073s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_product` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_product` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_product` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `product_id`,`product_type`,`product_cate`,`product_name`,`product_desc`,`thumb`,`images`,`content`,`jifen_price`,`xian_price`,`yuan_price`,`view`,`product_num`,`create_time`,`update_time`,`status`,`position_1`,`sort` FROM `jfsd_fx_product` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0014s ]
+SQL: SHOW FULL COLUMNS FROM jfsd_fx_product [ RunTime:0.0082s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8] Undefined index: product_type E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 60 行.
+NOTIC: [8] Undefined index: product_type E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 60 行.
+NOTIC: [8] Undefined index: product_cate E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 65 行.
+NOTIC: [8] Undefined index: product_cate E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 65 行.
+NOTIC: [8] Undefined index: product_cate E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 65 行.
+NOTIC: [8] Undefined index: product_cate E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\cc1f2e3e457c2e4d2c263e3fc914631c.php 第 65 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038174s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000889s ]
+
+[ 2016-04-07T17:17:07+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0048s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` >= 0 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2016-04-07T17:25:08+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0046s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` >= 0 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001666s ]
+
+[ 2016-04-07T17:25:52+08:00 ] 180.153.206.21 /index.php?m=Admin&c=FxOrder&a=edit&order_id=FX201604071725008771
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-04-07T17:25:52+08:00 ] 180.153.206.21 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007113s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2016-04-07T17:25:53+08:00 ] 124.202.246.198 /index.php?m=Admin&c=FxOrder&a=edit&order_id=FX201604071725008771
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `jfsd_fx_order` WHERE `order_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined index: user_avatar E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\279bfefc21bebb8495fcec09a4223178.php 第 71 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000387s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000449s ]
+
+[ 2016-04-07T17:26:48+08:00 ] 124.202.246.198 /index.php?order_id=&status=1&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0059s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` >= 0 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2016-04-07T17:26:51+08:00 ] 112.65.193.16 /index.php?order_id=&status=3&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002451s ]
+
+[ 2016-04-07T17:26:52+08:00 ] 112.65.193.16 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001538s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000356s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2016-04-07T17:26:52+08:00 ] 124.202.246.198 /index.php?order_id=&status=3&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0058s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` >= 0 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018797s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2016-04-07T17:27:36+08:00 ] 124.202.246.198 /index.php?order_id=&status=1&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0071s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000911s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2016-04-07T17:27:40+08:00 ] 101.226.51.229 /index.php?order_id=&status=&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001508s ]
+
+[ 2016-04-07T17:27:40+08:00 ] 101.226.51.229 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000551s ]
+
+[ 2016-04-07T17:27:41+08:00 ] 124.202.246.198 /index.php?order_id=&status=&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0055s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` >= 0 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2016-04-07T17:27:57+08:00 ] 180.153.206.13 /index.php?order_id=&status=&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+
+[ 2016-04-07T17:27:57+08:00 ] 180.153.206.13 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000983s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001093s ]
+
+[ 2016-04-07T17:28:02+08:00 ] 180.153.201.15 /index.php?order_id=771&status=&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+
+[ 2016-04-07T17:28:02+08:00 ] 180.153.201.15 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006492s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2016-04-07T17:28:03+08:00 ] 124.202.246.198 /index.php?order_id=771&status=&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `order_id` LIKE '%771%' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `order_id` LIKE '%771%' ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+NOTIC: [8] Undefined index: status E:\phpStudy\WWW\yuyingbo\paimai\Application\Runtime\Cache\Admin\a3c31a150cad305c9c6c311f0c09dfa9.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-04-07T17:28:09+08:00 ] 124.202.246.198 /index.php?order_id=771&status=1&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0072s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `order_id` LIKE '%771%' AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `order_id` LIKE '%771%' AND `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000960s ]
+
+[ 2016-04-07T17:28:11+08:00 ] 180.153.206.21 /index.php?order_id=771&status=1&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+
+[ 2016-04-07T17:28:11+08:00 ] 180.153.206.21 /index.php?m=Admin&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2016-04-07T17:28:14+08:00 ] 124.202.246.198 /index.php?order_id=&status=1&m=Admin&c=FxOrder&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `jfsd_auth_rule` [ RunTime:0.0062s ]
+SQL: SELECT `id`,`pid`,`name`,`title`,`type`,`hide`,`status`,`condition`,`sort` FROM `jfsd_auth_rule` WHERE `status` = 1 ORDER BY sort desc, id asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `jfsd_fx_order` [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_fx_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `order_id`,`user_id`,`price`,`create_time`,`update_time`,`order_info`,`pay_status`,`status` FROM `jfsd_fx_order` WHERE `status` = 1 ORDER BY update_time desc LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+

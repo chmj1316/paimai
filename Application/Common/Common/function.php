@@ -161,8 +161,8 @@ function image($img = '', $widht = 0, $height = 0) {
  * 生成订单编号
  *
  */
-function create_order_id(){
-    return 'NS' . date('YmdHis') . mt_rand(1000, 9999);
+function create_order_id($ext = 'NS'){
+    return $ext . date('YmdHis') . mt_rand(1000, 9999);
 }
 
 /**
@@ -319,6 +319,16 @@ function get_fx_product_type($type=''){
 function get_fx_product_cate($type=''){
     $list = C('FX_PRODUCT_CATE');
     return $type ? $list[$type] : '';
+}
+
+/**
+ * 获取分销商品分类
+ * @param string $group 类型
+ * @return string
+ */
+function get_fx_order_status($type=''){
+    $list = C('FX_ORDER_STATUS');
+    return $type ? $list[$type] : '已作废';
 }
 
 /**

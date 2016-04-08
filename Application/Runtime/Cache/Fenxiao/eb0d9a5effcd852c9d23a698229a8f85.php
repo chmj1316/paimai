@@ -20,21 +20,42 @@
         <section class="grzx_main auto">
             <div class="grzx_main_top">
                 <dl class="fix">
-                    <dt>
-                        <p>
-                            <img src="<?php echo ($user_info['user_avatar']); ?>" alt="">
-        					<em><a href="<?php echo U('index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg2.png" alt=""></a></em>
-                        </p>
-                        <span><a href="<?php echo U('index');?>" title=""><?php echo get_fx_group($user_info['fx_group'], 'name');?></a></span>
-                    </dt>
-                    <dd>
-                        会员ID ：<?php echo ($user_info['user_id']); ?>
-                        <br /> 昵称 ：<?php echo ($user_info['user_name']); ?>
-                        <br /> 推荐人：
-                        <?php echo empty($user_info['fx_sup'])?'中华聚宝':get_shop_info($user_info['user_avatar'])?>
-                        <a href="<?php echo U('index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg3.png" alt=""></a>
-                    </dd>
-                </dl>
+    <dt>
+        <p onclick="syncUserInfo();">
+            <img src="<?php echo ($user_info['user_avatar']); ?>" alt="">
+            <em><a href="<?php echo U('index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg2.png" alt=""></a></em>
+        </p>
+        <span><a href="<?php echo U('index');?>" title=""><?php echo get_fx_group($user_info['fx_group'], 'name');?></a></span>
+    </dt>
+    <dd>
+        会员ID ：<?php echo ($user_info['user_id']); ?>
+        <br /> 昵称 ：<?php echo ($user_info['user_name']); ?>
+        <br /> 推荐人：
+        <?php echo empty($user_info['fx_sup'])?'中华聚宝':get_shop_info($user_info['user_avatar'])?>
+        <a href="<?php echo U('index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg3.png" alt=""></a>
+    </dd>
+</dl>
+<script type="text/javascript">
+    var updateUserInfo = function() {
+        $.ajax({
+            url: '<?php echo U('syncUserInfo');?>',
+            type: 'post',
+            dataType: 'json',
+            success: function(res) {
+                if (res.status) {
+                    // alert(res.info)
+                    location.href = res.url
+                } else {
+                    alert(res.info)
+                }
+            },
+            error: function(){
+                alert('网络异常...')
+            }
+        })
+    }
+</script>
+
             </div>
             <div class="fxyj_main">
                 <div class="fxyj_main_top">
@@ -58,13 +79,13 @@
                                     订单编号：<?php echo ($val['order_id']); ?><br>
                                     订单时间：<?php echo date('Y/m/d H:i:s', $val['create_time']);?>
                                 </p>
-                                <span>
+                                <!-- <span>
                                     <img src="images/bg38.png" alt="">
                                     <em>情有独钟/85393140</em>
-                                </span>
+                                </span> -->
                             </li><?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul>
-                    <ul>
+                    <ul style="display:none;">
                         <?php if(is_array($lists2)): $i = 0; $__LIST__ = $lists2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li class="fix">
                                 <p>
                                     收支名称：<?php echo ($val['title']); ?><br>
@@ -91,6 +112,7 @@
             })
         </script>
         <!--foot start-->
+<div style="height:120px;"></div>
 <footer class="dbnr_main auto">
     <ul class="fix">
         <li>
@@ -100,13 +122,13 @@
             </a>
         </li>
         <li>
-            <a href="#" title="">
+            <a href="<?php echo U('Order/index');?>" title="">
                 <img src="/Public/Fenxiao/jfsd/images/bg8.png" alt="">
                 <span>我的订单</span>
             </a>
         </li>
         <li>
-            <a href="#" title="">
+            <a href="<?php echo U('Flow/index');?>" title="">
                 <img src="/Public/Fenxiao/jfsd/images/bg9.png" alt="">
                 <span>购物车</span>
             </a>

@@ -20,21 +20,42 @@
         <section class="grzx_main auto">
             <div class="grzx_main_top">
                 <dl class="fix">
-                    <dt>
-                        <p>
-                            <img src="<?php echo ($user_info['user_avatar']); ?>" alt="">
-        					<em><a href="<?php echo U('index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg2.png" alt=""></a></em>
-                        </p>
-                        <span><a href="<?php echo U('index');?>" title=""><?php echo get_fx_group($user_info['fx_group'], 'name');?></a></span>
-                    </dt>
-                    <dd>
-                        会员ID ：<?php echo ($user_info['user_id']); ?>
-                        <br /> 昵称 ：<?php echo ($user_info['user_name']); ?>
-                        <br /> 推荐人：
-                        <?php echo empty($user_info['fx_sup'])?'中华聚宝':get_shop_info($user_info['user_avatar'])?>
-                        <a href="<?php echo U('index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg3.png" alt=""></a>
-                    </dd>
-                </dl>
+    <dt>
+        <p onclick="syncUserInfo();">
+            <img src="<?php echo ($user_info['user_avatar']); ?>" alt="">
+            <em><a href="<?php echo U('index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg2.png" alt=""></a></em>
+        </p>
+        <span><a href="<?php echo U('index');?>" title=""><?php echo get_fx_group($user_info['fx_group'], 'name');?></a></span>
+    </dt>
+    <dd>
+        会员ID ：<?php echo ($user_info['user_id']); ?>
+        <br /> 昵称 ：<?php echo ($user_info['user_name']); ?>
+        <br /> 推荐人：
+        <?php echo empty($user_info['fx_sup'])?'中华聚宝':get_shop_info($user_info['user_avatar'])?>
+        <a href="<?php echo U('index');?>" title=""><img src="/Public/Fenxiao/jfsd/images/bg3.png" alt=""></a>
+    </dd>
+</dl>
+<script type="text/javascript">
+    var updateUserInfo = function() {
+        $.ajax({
+            url: '<?php echo U('syncUserInfo');?>',
+            type: 'post',
+            dataType: 'json',
+            success: function(res) {
+                if (res.status) {
+                    // alert(res.info)
+                    location.href = res.url
+                } else {
+                    alert(res.info)
+                }
+            },
+            error: function(){
+                alert('网络异常...')
+            }
+        })
+    }
+</script>
+
                 <ul class="fix">
                     <li>
                         <a href="<?php echo U('moneyLog');?>" title="">
@@ -77,21 +98,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="">
+                        <a href="<?php echo U('collect');?>" title="">
                             <img src="/Public/Fenxiao/jfsd/images/bg14.png" alt="">
                             <span>我的收藏</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="">
+                        <a href="<?php echo U('moneyLog');?>" title="">
                             <img src="/Public/Fenxiao/jfsd/images/bg15.png" alt="">
                             <span>我的提现</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="">
-                            <img src="/Public/Fenxiao/jfsd/images/bg16.png" alt="">
-                            <span>充值</span>
+                        <a href="<?php echo U('address');?>" title="">
+                            <img src="/Public/Fenxiao/jfsd/images/bg54.png" alt="">
+                            <span>收货地址</span>
                         </a>
                     </li>
                     <li>
@@ -107,25 +128,25 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="">
+                        <a href="javascript:alert('二期开发项目');" title="">
                             <img src="/Public/Fenxiao/jfsd/images/bg19.png" alt="">
                             <span>积分商城</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="">
+                        <a href="javascript:alert('二期开发项目');" title="">
                             <img src="/Public/Fenxiao/jfsd/images/bg20.png" alt="">
                             <span>一元购</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="">
+                        <a href="<?php echo U('Home/Index/index');?>" title="">
                             <img src="/Public/Fenxiao/jfsd/images/bg21.png" alt="">
                             <span>秒杀现场</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="">
+                        <a href="/bbs/" title="">
                             <img src="/Public/Fenxiao/jfsd/images/bg22.png" alt="">
                             <span>论坛</span>
                         </a>
@@ -134,6 +155,7 @@
             </div>
         </section>
         <!--foot start-->
+<div style="height:120px;"></div>
 <footer class="dbnr_main auto">
     <ul class="fix">
         <li>
@@ -143,13 +165,13 @@
             </a>
         </li>
         <li>
-            <a href="#" title="">
+            <a href="<?php echo U('Order/index');?>" title="">
                 <img src="/Public/Fenxiao/jfsd/images/bg8.png" alt="">
                 <span>我的订单</span>
             </a>
         </li>
         <li>
-            <a href="#" title="">
+            <a href="<?php echo U('Flow/index');?>" title="">
                 <img src="/Public/Fenxiao/jfsd/images/bg9.png" alt="">
                 <span>购物车</span>
             </a>

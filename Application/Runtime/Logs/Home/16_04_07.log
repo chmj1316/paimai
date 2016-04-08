@@ -1,0 +1,237 @@
+[ 2016-04-07T16:35:05+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-07T16:37:31+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-07T16:39:25+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001795s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-07T16:40:03+08:00 ] 124.202.246.198 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001203s ]
+SQL: SHOW COLUMNS FROM `jfsd_user` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jfsd_product` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `jfsd_product` WHERE `product_type` = 3 AND `status` = 1 AND `position_1` = 1 AND `begin_time` < 1460022001 AND `end_time` > 1460018401 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jfsd_product` WHERE `product_type` < 3 AND `status` = 1 AND `position_1` = 1 AND `begin_time` < 1460022001 AND `end_time` > 1460018401 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `shop_group` = 6 AND `status` = 1 ORDER BY sort asc  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 2 ORDER BY sort desc, id desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 3 ORDER BY sort desc, id desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 4 ORDER BY sort desc, id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 5 ORDER BY sort desc, id desc  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043942s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001059s ]
+
+[ 2016-04-07T16:40:03+08:00 ] 124.202.246.198 /default.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+
+[ 2016-04-07T16:40:03+08:00 ] 101.226.33.237 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `jfsd_user` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jfsd_product` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `jfsd_product` WHERE `product_type` = 3 AND `status` = 1 AND `position_1` = 1 AND `begin_time` < 1460022002 AND `end_time` > 1460018402 ORDER BY sort asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jfsd_product` WHERE `product_type` < 3 AND `status` = 1 AND `position_1` = 1 AND `begin_time` < 1460022002 AND `end_time` > 1460018402 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `shop_group` = 6 AND `status` = 1 ORDER BY sort asc  [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0035s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2016-04-07T16:40:03+08:00 ] 124.202.246.198 /Public/Home/css/images/shutiaobj.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+
+[ 2016-04-07T16:40:03+08:00 ] 124.202.246.198 /default.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-04-07T16:40:03+08:00 ] 124.202.246.198 /Public/Home/css/images/hsbj.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+
+[ 2016-04-07T16:40:04+08:00 ] 124.202.246.198 /Index/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `jfsd_user` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `jfsd_product` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jfsd_product` WHERE `status` = 1 AND `begin_time` < 1460022003 AND `end_time` > 1460018403 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-04-07T16:41:45+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-07T16:43:54+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001530s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-07T17:06:46+08:00 ] 111.30.132.158 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+SQL: SHOW COLUMNS FROM `jfsd_user` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jfsd_product` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `jfsd_product` WHERE `product_type` = 3 AND `status` = 1 AND `position_1` = 1 AND `begin_time` < 1460023605 AND `end_time` > 1460020005 ORDER BY sort asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jfsd_product` WHERE `product_type` < 3 AND `status` = 1 AND `position_1` = 1 AND `begin_time` < 1460023605 AND `end_time` > 1460020005 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `shop_group` = 6 AND `status` = 1 ORDER BY sort asc  [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 2 ORDER BY sort desc, id desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 3 ORDER BY sort desc, id desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 4 ORDER BY sort desc, id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 5 ORDER BY sort desc, id desc  [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2016-04-07T17:06:46+08:00 ] 111.161.57.163 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001960s ]
+SQL: SHOW COLUMNS FROM `jfsd_user` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jfsd_product` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `jfsd_product` WHERE `product_type` = 3 AND `status` = 1 AND `position_1` = 1 AND `begin_time` < 1460023605 AND `end_time` > 1460020005 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jfsd_product` WHERE `product_type` < 3 AND `status` = 1 AND `position_1` = 1 AND `begin_time` < 1460023605 AND `end_time` > 1460020005 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jfsd_user` WHERE `shop_group` = 6 AND `status` = 1 ORDER BY sort asc  [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `jfsd_banner_data` [ RunTime:0.0034s ]
+NOTIC: [2] file_get_contents(./Application/Runtime/Temp/jfsd_2f0be7e5a2d4fc50647063c49c283f18.php) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: Permission denied E:\phpStudy\WWW\yuyingbo\paimai\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 83 行.
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 1 ORDER BY sort desc, id desc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 2 ORDER BY sort desc, id desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 3 ORDER BY sort desc, id desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 4 ORDER BY sort desc, id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jfsd_banner_data` WHERE `bid` = 5 ORDER BY sort desc, id desc  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047959s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-04-07T17:19:27+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001315s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-07T17:19:30+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-07T17:19:34+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-04-07T17:19:37+08:00 ] 124.202.246.198 /Public/Fenxiao/jfsd/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+ERR: 无法加载控制器:Public
+

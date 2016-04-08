@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+        <title>确认订单</title>
+        <!--[if lt IE 9]>
+            <script src="__FENXIAO__jfsd/js/html5shiv.min.js"></script>
+            <script src="__FENXIAO__jfsd/js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/common.css" />
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/style.css?c=31213" />
+        <script src="__FENXIAO__jfsd/js/jquery-1.9.1.min.js"></script>
+        <script src="__FENXIAO__jfsd/js/myjs.js"></script>
+        <script src="__FENXIAO__jfsd/js/swiper.min.js"></script>
+    </head>
+
+    <body>
+        <section class="qrdd_main auto">
+        <form action="">
+            <div class="qrdd_main1">
+                <h2><img src="__FENXIAO__jfsd/images/bg50.png" alt=""> 收货信息</h2>
+                <ol>
+                <empty name="consign_lists">
+                    <a href="{:U('User/address', array('type'=>1, 'redirct_url'=>base64_encode('Flow/submit')))}" title="请完善收货信息">请完善收货信息</a>
+                <else />
+                    <volist name="consign_lists" id="val">
+                        <li class="fix">
+                            <p>
+                                <input id="radio-1-{$val['address_id']}" class="regular-radio big-radio" type="radio" name="address_id" value="{$val['address_id']}" <eq name="val['is_default']" value="1">checked</eq>/>
+                                <label for="radio-1-{$val['address_id']}" style="margin-top:30px;"></label>
+                            </p>
+                            <a href="javascrip:void(0);">{$val['consign_name']}    {$val['mobile']}<br />{$val['province']}-{$val['city']}-{$val['area']}-{$val['address']}</a>
+                        </li>
+                    </volist>
+                </empty>
+                </ol>
+            </div>
+            <div class="qrdd_main2">
+                <h2><img src="__FENXIAO__jfsd/images/bg51.png" alt=""> 支付方式</h2>
+                <ul>
+                    <li class="fix">
+                        <p>
+                            <input id="radio-2-1" class="regular-radio big-radio" type="radio" name="pay_mode" value="1" checked/>
+                            <label for="radio-2-1" style="margin-top:30px;"></label>
+                        </p>
+                        <span><img src="__FENXIAO__jfsd/images/pic13.jpg" alt=""></span>
+                        <em>微支付3.0</em>
+                    </li>
+                    <li class="fix">
+                        <p>
+                            <input id="radio-2-2" class="regular-radio big-radio" type="radio" name="pay_mode" value="2" />
+                            <label for="radio-2-2" style="margin-top:30px;"></label>
+                        </p>
+                        <span><img src="__FENXIAO__jfsd/images/pic14.jpg" alt=""></span>
+                        <em>余额支付</em>
+                    </li>
+                </ul>
+            </div>
+            <div class="qrdd_main3">
+                <h2><img src="__FENXIAO__jfsd/images/bg52.png" alt=""> 订单信息</h2>
+                <ul>
+                    <li>商品金额：{$count_price}</li>
+                    <li>商品数量：{$count_num}</li>
+                    <li>订单运费：免运费</li>
+                    <li>备注信息：
+                        <input type="text" name="content" style="color: #515151; width: 350px; height: 63px; line-height: 63px; background: none; border: none; -webkit-appearance: none;">
+                    </li>
+                </ul>
+            </div>
+            <div class="gwc_main_bottom fix">
+                <ol>合计：<span>￥{$count_price}</span></ol>
+                <ul><a href="javascript:void(0);" id="submit">提交订单</a></ul>
+            </div>
+        </form>
+        </section>
+        <script type="text/javascript">
+            $(function(){
+                var flag = true
+                if (flag) {
+                    $("#submit").bind('click', function(){
+                        $.ajax({
+                            url: '{:U('Flow/submit')}',
+                            data: $("form").serialize(),
+                            type: 'post',
+                            dataType: 'json',
+                            beforeSend: function(){
+                                flag = false
+                            },
+                            success: function(res) {
+                                if (res.status) {
+                                    location.href = res.url
+                                } else {
+                                    flag = true
+                                    alert(res.info)
+                                }
+                            },
+                            error: function(){
+                                flag = true
+                                alert('网络异常...')
+                            }
+                        })
+                    })
+                }
+            })
+        </script>
+    </body>
+
+</html>

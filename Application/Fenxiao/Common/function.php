@@ -380,11 +380,31 @@ function default_consign($user_id){
         'user_id' => $user_id,
         'is_default' => 1
     );
-    $lists = M('userConsign')->where($map)->find();
+    $lists = M('UserConsign')->where($map)->find();
     if ($lists) {
         $lists['area'] = json_decode($lists['area'], true);
         return $lists;
     } else {
         return array();
+    }
+}
+
+/**
+ * 获取店铺信息
+ *
+ */
+function get_user_info($user_id, $field = 'user_name'){
+    $user_id = intval($user_id);
+    if (empty($user_id)) {
+        return '中华聚宝';
+    }
+    $user_info = M('User')->find($user_id);
+    if (empty($user_info)) {
+        return '中华聚宝';
+    }
+    if ($field) {
+        return $user_info[$field];
+    } else {
+        return $user_info;
     }
 }

@@ -3,146 +3,196 @@
 
     <head lang="en">
         <meta charset="UTF-8">
-        <title>{$info['product_name']}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=no">
-        <script type="text/javascript" src="__FENXIAO__js/jquery-1.8.3.min.js"></script>
-        <link href="__FENXIAO__css/Css.css" rel="stylesheet">
-        <link href="__FENXIAO__css/Css(1).css" rel="stylesheet">
-        <link href="__FENXIAO__js/Css.aspx" rel="stylesheet">
-        <link href="__FENXIAO__css/idangerous.swiper.css" rel="stylesheet">
-        <link href="__FENXIAO__css/shopInfoOne.css" rel="stylesheet">
-        <link href="__FENXIAO__css/Product.css" rel="stylesheet">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+        <title>产品详细信息</title>
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/common.css" />
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/style.css" />
+        <link rel="stylesheet" href="__FENXIAO__jfsd/css/swiper.min.css" />
+        <script src="__FENXIAO__jfsd/js/jquery-1.9.1.min.js"></script>
+        <script src="__FENXIAO__jfsd/js/myjs.js"></script>
+        <script src="__FENXIAO__jfsd/js/swiper.min.js"></script>
+        <script src="__FENXIAO__jfsd/js/jquery.SuperSlide.2.1.1.js"></script>
     </head>
 
     <body>
-
-        <form method="post" action="http://milaijia.tyr88.com/Mall/Html/100553/Product/ProductInfo.aspx?CustID=100553&amp;ID=251552&amp;Tag=html" id="form1">
-            <div class="TopTitle">
-                <a class="return" href="javascript:back()"></a>
-                <label class="Detailed">商品详情</label>
-                <script type="text/javascript">
-                    LoadMenu();
-                </script>
-            </div>
-            <!--图片滚动开始-->
-            <div class="RollIMG2 Shadow1 PaddingHeight">
-                <div class="swiper-container" style="cursor: -webkit-grab;">
-                    <div class="swiper-wrapper" id="IMGContent"></div>
-                </div>
-                <div class="pagination"><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span></div>
-            </div>
-            <textarea id="IMGValue" style="display: none">
+        <section class="index_banner auto">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
                 <volist name="info['images']" id="val">
-                    <div class='swiper-slide' style="background-image:url('{:image($val)}')"></div>
+                    <div class="swiper-slide"><img src="{:thumb($val, 640, 340)}" width="640" height="340" alt="{$info['product_name']}"></div>
                 </volist>
-
-                <div class='swiper-slide' style="background-image:url('http://milaijia.tyr88.com/Upload_S/U_IMG/img_100553/100553_20160322/zp20160322010047879277087.png')"></div>
-            </textarea>
-            <script src="__FENXIAO__js/idangerous.swiper-2.0.min.js"></script>
-            <!--图片滚动结束-->
-            <div id="ShareInfoDiv" style="margin: 0px 8px 0px 8px; padding-top: 5px; background: #FFFFFF">
-                <div class="ShareInfo" id="ShareInfo">
-                    <div class="ShareInfo">
-                        <div class="IMG" style="width:50%;margin:12px 10px 15px 0px;padding-left:20px;color: #FFFFFF;" onclick="LoginUrl()">请点击登录</div><a id="UserA" href="http://milaijia.tyr88.com/Mall/Shop/Login.aspx"><span id="UserText">会员登录</span></a></div>
                 </div>
-                <script type="text/javascript">
-                    ShareInfo();
-                </script>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="ProductInfo">
-                <div class="ProductTitle">{$info['product_name']}</div>
-                <switch name="info['product_type']">
-                    <case value="1">
-                        <div class="ProductPrice">
-                            <label for="PriceType0">现价：<span>¥{$info['xian_price']}</span><font class="font">原价：¥{$info['yuan_price']}</font></label>
-                            <a href="javascript:MallFavoritesAdd()" id="collect" class="collect0">
-                                <span style="font-size: 1.2rem; color: #333333">收藏</span>
-                            </a>
-                        </div>
-                    </case>
-                    <case value="2">
-                        <div class="ProductPrice">
-                            <label for="PriceType0">积分：<span>{$info['jifen_price']}</span></label>
-                            <a href="javascript:MallFavoritesAdd()" id="collect" class="collect0">
-                                <span style="font-size: 1.2rem; color: #333333">收藏</span>
-                            </a>
-                        </div>
-                    </case>
-                </switch>
-                <div class="Split10"></div>
-                <div class="SetCount">
-                    <dd onclick="AddCount2('Count',-1)">-</dd>
-                    <span id="Count">1</span>
-                    <label onclick="AddCount2('Count',1)">+</label>
-                </div>
-                <div class="ProductPrice">
-                    <label for="PriceType0">卖家包邮</label>
-                </div>
-                <div id="ProductTitle" class="ProductTitle">
-                    <a href="{:U('Index/tuiguang')}">
-                        <span style="font-weight: 700; color: Red; font-size: 14px; line-height: 14px;">我要推荐</span>
-                    </a>
-                </div>
-                <div class="Split20"></div>
-                <div class="ToBuyBorder"></div>
-
-                <div id="ToBuyDiv" class="ToBuy" style="display: ">
-                    <div id="ToBuyC"><a id="AddCartBt" class="L" href="javascript:Cart_INSERT([{ProductID:251552,CountObj:&quot;Count&quot;,BuyType:GetBuyType()}])">放入购物车</a><a class="R" href="javascript:Cart_INSERT([{ProductID:251552,CountObj:&quot;Count&quot;,Type:1,BuyType:GetBuyType()}])">立即购买</a></div>
-
-                </div>
-
-            </div>
-            <div class="wwrry">
-                <!-- 分享抢购 -->
-            </div>
-            <div id="PInfo" class="PInfo">
-                <div class="ProductDetailed" id="ProductDetailed">
-                    <ul>
-                        <li class="current" style="width:100%;">商品介绍<span></span></li>
-                    </ul>
-                </div>
-                <style media="screen">
-                    .Content {
-                        overflow: hidden;
-                    }
-                    .Content img {
-                        width: 100%;
-                    }
-                </style>
-                <div class="Content">{$info['content']}</div>
-            </div>
-            <div class="circle"></div>
-            <div class="Split10"></div>
-            <div class="Split10"></div>
-            <div class="Footer">Copyright © 2016，All Rights Reserved
-                <br />
-                <span id="DlsSet" onclick="javascript:" style="margin-left:10px;" class="DlsSet">
-                    <a href="http://www.bjjfsd.com/" style="margin-right:0px"><span style="font-size:1.2rem;color:#333333">技术支持</span></a>
-                </span>
-                <span onclick="javascript:location.href=location.href" style="margin-left:10px;">刷新</span>
-            </div>
-            <div id="Car" class="Car" onclick="javascript:location.href=&#39;/Mall/Shop/ShopCart.aspx&#39;"></div>
-            <script type="text/javascript">
-                TabClick();
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    spaceBetween: 30,
+                    autoplay: 3000,
+                    loop: true,
+                });
             </script>
-            <div id="Split55" class="Split55" style="display: none"></div>
-
-            <div id="FixedBuy" class="FixedBuy" style="display: none">
-                <div id="BottonDiv"><a class="L" href="javascript:Cart_INSERT([{ProductID:251552,CountObj:&quot;Count&quot;,BuyType:GetBuyType()}])">放入购物车</a><a class="R" href="javascript:Cart_INSERT([{ProductID:251552,CountObj:&quot;Count&quot;,Type:1,BuyType:GetBuyType()}])">立即购买</a></div>
+        </section>
+        <!--banner end-->
+        <section class="cpxx_main auto">
+            <div class="cpxx_main1 fix">
+                <ol class="fix">
+                    <if condition="$user_info['fx_sup'] gt 0">
+                        <p>
+                            <img src="{:get_user_info($user_info['fx_sup'], 'user_avatar')}" alt="">
+                            <em><a href="javascript:void(0);" title=""><img src="__FENXIAO__jfsd/images/bg44.png" alt=""></a></em>
+                        </p>
+                        <span>
+                            来自 {:get_user_info($user_info['fx_sup'], 'user_name')} 的分享
+                            <em>快乐源自分享</em>
+                        </span>
+                    <else />
+                        <p>
+                            <img src="__FENXIAO__jfsd/images/logo.png" alt="">
+                            <em><a href="javascript:void(0);" title=""><img src="__FENXIAO__jfsd/images/bg44.png" alt=""></a></em>
+                        </p>
+                        <span>
+                            来自 中华聚宝 的分享
+                            <em>快乐源自分享</em>
+                        </span>
+                    </if>
+                </ol>
+                <ul><a href="{:U('User/index')}" title="{$user_info['user_name']}">会员中心</a></ul>
             </div>
-        </form>
+            <div class="cpxx_main2">
+                <div class="cpxx_main2_1">{$info['product_name']}</div>
+                <div class="cpxx_main2_2 fix">
+                    <span>现价：<em>￥{$info['xian_price']}</em><del>原价：￥{$info['yuan_price']}</del></span>
+                    <a href="javascript:ajaxPost('{:U('User/collect', array('type'=>1,'product_id'=>$info['product_id']))}');" title=""><img src="__FENXIAO__jfsd/images/bg45.png" alt=""> 收藏</a>
+                </div>
+                <div class="cpxx_main2_3 fix">
+                    <div class="z_jiajian fix">
+                        <div class="z_jian z_szanniu z_fs16 tc fl">-</div>
+                        <div class="z_shu fl tc" data-num="1">
+                            <input type="text" id="num" class="z_shu_input z_fs16 tc" value="1">
+                        </div>
+                        <div class="z_jia z_szanniu z_fs16 tc fl">+</div>
+                    </div>
+                    <!-- <div class="kcys">库存：496<br />已售：62</div> -->
+                </div>
+                <div class="cpxx_main2_4">卖家包邮</div>
+                <div class="cpxx_main2_5">我要推荐</div>
+                <div class="cpxx_main2_6 fix">
+                    <input type="button" id="add-cart" value="放入购物车" class="btn1" />
+                    <input type="submit" id="buy" id="button" value="立即购买" class="btn2" />
+                </div>
+            </div>
+            <div class="cpxx_main3">
+                <h2 class="fix"><a href="javascript:void(0);" title="">商品介绍</a></h2>
+                <ul>{$info['content']}</ul>
+            </div>
+        </section>
         <script type="text/javascript">
-            document.write("<script type=\"text/javascript\" src=\"/Mall/Shop/JS/Html/Product_End.js?t=" + new Date().getSeconds() + "\"><\/script>") //清除缓存
+            var ajaxPost = function(url, data){
+
+            }
+            $("#add-cart").bind('click', function(){
+                var data = {
+                    product_id: {$info['product_id']},
+                    num: $("#num").val()
+                }
+                $.ajax({
+                    url: '{:U('Flow/add')}',
+                    data: data,
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.status) {
+                            alert(res.info)
+                        } else {
+                            alert(res.info)
+                        }
+                    },
+                    error: function(){
+                        alert('网络异常...')
+                    }
+                })
+            })
+            $("#buy").bind('click', function(){
+                var data = {
+                    product_id: {$info['product_id']},
+                    num: $("#num").val()
+                }
+                $.ajax({
+                    url: '{:U('Flow/add')}',
+                    data: data,
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(res) {
+                        if (res.status) {
+                            location.href = '{:U('Flow/index')}'
+                        } else {
+                            alert(res.info)
+                        }
+                    },
+                    error: function(){
+                        alert('网络异常...')
+                    }
+                })
+            })
         </script>
-        <script type="text/javascript" src="__FENXIAO__js/Product_End.js"></script>
-        <div id="floatTools" class="rides-cs" style="display:none"></div>
-        <div id="AttentionBottom" class="outBox" style="display:none"></div>
-        <script type="text/javascript" src="__FENXIAO__js/AttentionMsg.js"></script>
-        <script type="text/javascript" src="__FENXIAO__js/QQ.js"></script>
-        <link href="__FENXIAO__css/kefu.css" rel="stylesheet">
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+        <script>
+            var _shareInfo = {
+                title: '{$info['product_name']}',
+                desc: '{$info['product_desc']}',
+                imgUrl: '{:thumb($info['thumb'])}',
+                link: '{:U('product', array('share_uid'=>$user_info['user_id']))}'
+            };
+        </script>
+        <script>
+            wx.config({
+                debug: <if condition="C('DEVELOP_MODE') == 1">true<else />false</if>,
+                appId: '{$wx_config['appId']}',
+                nonceStr: '{$wx_config['nonceStr']}',
+                timestamp: '{$wx_config['timestamp']}',
+                signature: '{$wx_config['signature']}',
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage', 'openLocation', 'getLocation', 'scanQRCode', 'openProductSpecificView', 'chooseWXPay']
+            });
+        </script>
+        <script>
+            wx.ready(function(){
+                wx.onMenuShareTimeline({
+                    title: _shareInfo.title, // 分享标题
+                    link: _shareInfo.link, // 分享链接
+                    imgUrl: _shareInfo.imgUrl, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                wx.onMenuShareAppMessage({
+                    title: _shareInfo.title, // 分享标题
+                    desc: _shareInfo.desc, // 分享描述
+                    link: _shareInfo.link, // 分享链接
+                    imgUrl: _shareInfo.imgUrl, // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
 
-
-
+            });
+        </script>
+        <include file="User/footer" />
     </body>
 
 </html>

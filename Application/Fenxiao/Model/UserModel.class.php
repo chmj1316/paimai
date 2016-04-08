@@ -20,7 +20,12 @@
 namespace Fenxiao\Model;
 use Think\Model;
 class UserModel extends Model {
-
+    /**
+     * 获取佣金明细
+     * @param  [type]  $uid  用户uid
+     * @param  integer $type 查询类型
+     * @return [type]        [description]
+     */
     public function getMoneyLog($uid, $type = 0) {
         $FxMoneyLog =D('FxMoneyLog');
         $map = array('uid' => $uid);
@@ -34,7 +39,28 @@ class UserModel extends Model {
                 break;
         }
         $lists = $FxMoneyLog->where($map)->order('id desc')->select();
+        return $lists;
+    }
 
+    /**
+     * 获取积分明细
+     * @param  [type]  $uid  用户uid
+     * @param  integer $type 查询类型
+     * @return [type]        [description]
+     */
+    public function getInterLog($uid, $type = 0) {
+        $FxInterLog =D('FxInterLog');
+        $map = array('uid' => $uid);
+        switch ($type) {
+            case 1:
+                $map['title'] = '佣金返积分';
+                break;
+
+            default:
+
+                break;
+        }
+        $lists = $FxInterLog->where($map)->order('id desc')->select();
         return $lists;
     }
 
@@ -158,6 +184,39 @@ class UserModel extends Model {
     }
 
     /**
+     * 余额支付
+     * @param  string $order_id         订单号
+     */
+    public function pay($order_id) {
+        $order = M('FxOrder')->field('user_id, price')->where(array('order_id'=>$order_id))->find();
+        $map = array('user_id' => $order['user_id']);
+        $FxMoneyLog = M('FxMoneyLog');
+        $user_money = $this->where($map)->getField('fx_money');
+        if ($user_money >= $order['price']) {
+            $result = $this->where($map)->setDec('fx_money', $order['price']);
+            if ($result) {
+                $data = array(
+                    'uid' => $order['user_id'],
+                    'title' => '购买消费',
+                    'order' => $order_id,
+                    'money' => -$order['price'],
+                    'at_money' => $user_money,
+                    'content' => '余额支付消费',
+                    'create_time' => time(),
+                    'update_time' => time(),
+                    'status' => 1
+                );
+                return $FxMoneyLog->add($data);
+            } else {
+                return $result;
+            }
+        } else {
+            $this->error = '可用余额有限';
+            return false;
+        }
+    }
+
+    /**
      * 分销总处理
      * @param  int $uid                 用户
      * @param  string $order_id         订单号
@@ -169,6 +228,7 @@ class UserModel extends Model {
             $this->_fenxiaoMoney($order['user_id'], $order['price']);
             $this->_fenxiaoInter($order['user_id'], $order['price']);
             $this->_hongbaoMoney($order['user_id'], $order['price']);
+            return true;
         } else {
             return $order;
         }
@@ -182,11 +242,17 @@ class UserModel extends Model {
      */
     public function tixian($uid, $money) {
         $map = array('user_id' => $uid);
-        $user = $this->field('openid, fx_money')->where($map)->find();
+        $user = $this->field('openid,fx_group,fx_money')->where($map)->find();
         if ($user['fx_money'] < $money) {
             $this->error = '可提现金额有限';
             return false;
         }
+        if ($user['fx_group'] < 2) {
+            $this->error = '正式会员才有提现功能';
+            return false;
+        }
+        // 事务开启
+        $this->startTrans();
         $result = $this->where($map)->setDec('fx_money', $money);
         if($result) {
             $data = array(
@@ -201,7 +267,15 @@ class UserModel extends Model {
             );
             M('FxMoneyLog')->add($data);
             // 对接微信企业转账
-            return $this->_transfer($user['openid'], $money, '佣金提现');
+            $result =  $this->_transfer($user['openid'], $money, '佣金提现');
+            if ($result) {
+                // 事务提交
+                $this->commit();
+            } else {
+                // 事务回滚
+                $this->rollback();
+            }
+            return $result;
         } else {
             return $result;
         }
@@ -216,10 +290,6 @@ class UserModel extends Model {
         $map = array('user_id' => $uid);
         $user = $this->field('openid, fx_group, fx_hb')->where($map)->find();
         $fx_group = get_fx_group($user['fx_group']);
-        if ($user['fx_group'] < 3) {
-            $this->error = 'VIP会员才有抢红包功能';
-            return false;
-        }
         if ($user['fx_group'] < 3) {
             $this->error = 'VIP会员才有抢红包功能';
             return false;
@@ -387,33 +457,34 @@ class UserModel extends Model {
         $fx_group_list = get_fx_group();
         $map = array('user_id' => $uid);
         $this->where($map)->setInc('fx_hb_zxf_lj', $money);
-        $user = $this->field('fx_sup, fx_hb_zxf_lj,fx_hb_wlqxf_lj')->where($map)->find();
+        $user = $this->field('fx_sup,fx_group,fx_hb_zxf_lj,fx_hb_wlqxf_lj')->where($map)->find();
 
         //处理是否符合增加红包条件
         $hb_wlqxf_lj = $user['fx_hb_wlqxf_lj'] + $money;
         if ($hb_wlqxf_lj >= ($base * 2)) {
-            $hb_shu = ceil($hb_wlqxf_lj / ($base * 2));
+            $hb_shu = floor($hb_wlqxf_lj / ($base * 2));
             $this->_andhongbao($uid, $hb_shu);                                      // +红包
-            $this->where($map)->setInc('fx_hb_ylqxf_lj', $base * 2 * $hb_shu);  // +已领取消费
-            $this->where($map)->setDec('fx_hb_wlqxf_lj', $base * 2 * $hb_shu);  // -未领取消费
+            $shu = $base * 2 * $hb_shu;
+            $this->where($map)->setInc('fx_hb_ylqxf_lj', $shu);      // +已领取消费
+            $this->where($map)->setField('fx_hb_wlqxf_lj', $hb_wlqxf_lj - $shu);  // -未领取消费
         } else {
             $this->where($map)->setInc('fx_hb_wlqxf_lj', $money);               // +未领取消费
         }
         // 自消费2个399, 升级为vip1；
         if ($level === 0 && $money >= ($base * 2) && $user['fx_group'] == 1) {
-            $this->where($map)->setFiled('fx_group', 3);
+            $this->where($map)->setField('fx_group', 3);
             $this->_andhongbao($uid, 20);   //送20个红包
         }
         // 自消费1个399, 升级为正式会员；
         if ($level === 0 && $money >= $base && $user['fx_group'] == 1) {
-            $this->where($map)->setFiled('fx_group', 2);
+            $this->where($map)->setField('fx_group', 2);
         }
         // 是否符合升级条件
         $zhituishu = $this->where(array('fx_sup'=>$uid))->count();
         foreach (get_fx_group() as $key => $value) {
             //是否达到总分销记录和直推数， 并防止等级倒退, 必须是普通会员以上才可以升级
             if ($user['fx_group'] > 1 && $key > $user['fx_group'] && $user['fx_hb_zxf_lj'] >= ($value['beishu'] * $base) &&  $zhituishu >= $value['zhituishu']) {
-                $this->where($map)->setFiled('fx_group', $key);
+                $this->where($map)->setField('fx_group', $key);
                 if ($key == 3) {
                     $this->_andhongbao($uid, 20);   //送20个红包
                 }
@@ -433,22 +504,39 @@ class UserModel extends Model {
      * @param int  $num     红包梳理
      * @param int  $act     1增， 0减
      */
-    private function _andhongbao($uid, $num) {
+    private function _andhongbao($uid, $num, $act = 1) {
         $map = array('user_id' => $uid);
-        if ($result = $this->where($map)->setInc('fx_hb', $num)) {
-            $this->where($map)->setInc('fx_hb_lj', $num);
-            //红包明细记录
-            return M('FxHongbaoLog')->add(array(
-                'uid' => $uid,
-                'title' => '获得红包',
-                'num' => $num,
-                'content' => '获得红包' . $num . '个',
-                'create_time' => time(),
-                'update_time' => time(),
-                'status' => 1
-            ));
+        if ($act) {
+            if ($result = $this->where($map)->setInc('fx_hb', $num)) {
+                $this->where($map)->setInc('fx_hb_lj', $num);
+                //红包明细记录
+                return M('FxHongbaoLog')->add(array(
+                    'uid' => $uid,
+                    'title' => '获得红包',
+                    'num' => $num,
+                    'content' => '获得红包' . $num . '个',
+                    'create_time' => time(),
+                    'update_time' => time(),
+                    'status' => 1
+                ));
+            } else {
+                return $result;
+            }
         } else {
-            return $result;
+            if ($result = $this->where($map)->setDec('fx_hb', $num)) {
+                //红包明细记录
+                return M('FxHongbaoLog')->add(array(
+                    'uid' => $uid,
+                    'title' => '领取红包',
+                    'num' => -$num,
+                    'content' => '领取' . $num . '个红包，红包数量减少',
+                    'create_time' => time(),
+                    'update_time' => time(),
+                    'status' => 1
+                ));
+            } else {
+                return $result;
+            }
         }
     }
 

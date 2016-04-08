@@ -4,7 +4,6 @@ use Fenxiao\Common\IController;
 class UserController extends IController {
 
     public function index(){
-
         $this->display();
     }
 
@@ -16,7 +15,7 @@ class UserController extends IController {
         $lists = $User->getMoneyLog($this->user_info['user_id'], 1);
         $lists2 = $User->getMoneyLog($this->user_info['user_id'], 2);
 
-        print_r($lists);
+        // print_r($lists);
         $this->assign('lists', $lists);
         $this->assign('lists2', $lists2);
         $this->display();
@@ -26,7 +25,13 @@ class UserController extends IController {
      * 积分明细
      */
     public function interLog(){
+        $User = D('User');
+        $lists = $User->getInterLog($this->user_info['user_id'], 1);
+        $lists2 = $User->getInterLog($this->user_info['user_id'], 2);
 
+        // print_r($lists);
+        $this->assign('lists', $lists);
+        $this->assign('lists2', $lists2);
         $this->display();
     }
 
@@ -37,6 +42,20 @@ class UserController extends IController {
         $fenxiao = D('User')->getFenxiaoNum($this->user_info['user_id']);
         // print_r($fenxiao);
         $this->assign('fenxiao', $fenxiao);
+        $this->display();
+    }
+    /**
+     * 分销列表
+     * @param  integer $level 等级
+     */
+    public function fenxiaoShow($level = 0){
+        if (empty($level)) {
+            $this->redirect('index');
+        }
+        $fenxiao = D('User')->getFenxiaoNum($this->user_info['user_id']);
+        // print_r($fenxiao);
+        $this->assign('fenxiao', $fenxiao);
+        $this->assign('level', $level);
         $this->display();
     }
 
@@ -69,7 +88,8 @@ class UserController extends IController {
      */
     public function tixian(){
         $User = D('User');
-        $result = $User->tixian($this->user_info['user_id'], $this->user_info['fx_money']);
+        // $result = $User->tixian($this->user_info['user_id'], $this->user_info['fx_money']);
+        $result = $User->tixian($this->user_info['user_id'], 1);
         if ($result) {
             $this->success('提现成功', U('index'));
         } else {
@@ -202,8 +222,10 @@ class UserController extends IController {
         }
     }
 
-    // 同步微信信息
-    public function sync(){
+    /**
+     * 同步微信信息
+     */
+    public function syncUserInfo(){
         $wx_info = $this->WX->getUserInfo($this->user_info['openid']);
         $data = array(
             'user_id' => $this->user_info['user_id'],
@@ -212,103 +234,115 @@ class UserController extends IController {
             'update_time' => NOW_TIME
         );
         M('User')->save($data);
-        $this->redirect('User/index');
+        $this->redirect('index');
     }
 
-    // 强红包
-    public function hongBao2(){
-        if (!C('HONG_BAO_ALLOW')) {
-            $this->resultError('未开启拆红包功能');
-        }
-        if (!$this->user_info['is_subscribe']) {
-            $this->resultError('请先关注公众平台【'. C('WEB_SITE_TITLE') .'】', '', 'http://mp.weixin.qq.com/s?__biz=MzI2OTA4MzI4NA==&mid=401275684&idx=4&sn=215571f800f39c82095f7dca83728a0e#rd');
-        }
-        if (!$this->user_info['mobile']) {
-            $this->resultError('请先完善个人资料手机号参数必填', '', U('Setting/index'));
-        }
-		// $this->resultError('end', '', U('Setting/index'));
-        $shop_id    = I('shop_id', 0, 'intval');
-        if (!$shop_id) {
-            $this->resultError('无效店铺参数');
-        }
-        $Hongbao = M('Hongbao');
-        $map = array(
-            'shop_id'       => $shop_id,
-            'user_id'       => $this->user_info['user_id'],
-            'create_time'   => array('gt', strtotime(date('Ymd'))),
-            'status'        => 1
-        );
-        $count = $Hongbao->where($map)->count();
-        if ($count) {
-            $this->resultError('每天每个店铺只能领取一次');
-        }
-        $moneys = explode('-', C('HONG_BAO_MONEY'));
-        if (count($moneys) == 1) {
-            $money = $moneys[0];
-        } elseif (count($moneys) == 2) {
-            $money = mt_rand($moneys[0], $moneys[1]);
-        }
-        $data = array(
-            'user_id'       => $this->user_info['user_id'],
-            'shop_id'       => $shop_id,
-            'money'         => $money,
-            'create_time'   => NOW_TIME,
-            'update_time'   => NOW_TIME,
-            'status'        => 1
-        );
-        $result = $Hongbao->add($data);
-        if ($result) {
-            fund_inc($this->user_info['user_id'], $money, '拆红包');
-            // 给卖家发
-            // $data = array(
-                // 'first' => '你好，【'. $this->user_info['user_name'] .'】获得￥'. $money,
-                // 'product_id' => $result,
-                // 'product_name' => '抢红包活动',
-                // 'remark' => '抢红包时间：' . date('Y-m-d H:i:s')
-            // );
-            // $this->sendBid($this->user_info['openid'], U('User/index'), $data);
-			$shop_data = array(
-				'touser' => $this->user_info['openid'],
-				'msgtype' => 'news',
-				'news' => array(
-					'articles' => array(
-						array(
-							'title' => '抢购红包成功提示',
-							'description' => '你好，【'. $this->user_info['user_name'] .'】获得￥'. $money . PHP_EOL . '抢红包时间：' . date('Y-m-d H:i:s'),
-							'url' => C('WEB_SITE_URL') . U('User/index'),
-							'picurl' => ''
-						)
-					)
-				)
-			);
-			$this->WX->sendCustomMessage($shop_data);
-            $this->resultSuccess('抢红包获得￥'. $money);
-        } else {
-            $this->resultError();
+    /**
+     * 收藏
+     */
+    public function collect($type = 0, $product_id = 0){
+        $FxProductCollect = D('FxProductCollect');
+        switch ($type) {
+            case '1':   //添加
+                $result = $FxProductCollect->input($this->user_info['user_id'], $product_id);
+                if ($result) {
+                    $this->success('成功', U('collect'));
+                } else {
+                    $this->error($FxProductCollect->getError());
+                }
+                break;
+            case '2':   //删除
+                if (empty($product_id)) {
+                    $this->error('非法参数...');
+                }
+                $result = $FxProductCollect->del($this->user_info['user_id'], $product_id);
+                if ($result) {
+                    $this->success('成功', U('collect'));
+                } else {
+                    $this->error($FxProductCollect->getError());
+                }
+                break;
+            default:
+                $lists = $FxProductCollect->getLists($this->user_info['user_id']);
+                $this->assign('lists', $lists);
+                $this->display();
+                break;
         }
     }
 
-    // 留言
-    public function message(){
-        if (IS_POST) {
-            $data = array(
-                'user_id' => $this->user_info['user_id'],
-                'email' => I('email'),
-                'content' => I('content'),
-                'create_time' => NOW_TIME,
-                'update_time' => NOW_TIME
-            );
-            if (empty($data['content'])) {
-                $this->resultError('内容不能为空');
-            }
-            $result = M('Message')->add($data);
-            if ($result) {
-                $this->resultSuccess('成功', '', U('index'));
-            } else {
-                $this->resultError();
-            }
-        } else {
-            $this->display();
+    /**
+     * 收货地址管理
+     */
+    public function address($type = 0, $address_id = 0){
+        $UserConsign = D('UserConsign');
+        switch ($type) {
+            case '1':   //新增
+                if (IS_POST) {
+                    $result = $UserConsign->update($this->user_info['user_id']);
+                    if ($result) {
+                        $redirct_url = cookie('redirct_url');
+                        cookie('redirct_url', null);
+                        $this->success('成功', $redirct_url ? $redirct_url : U('address'));
+                    } else {
+                        $this->error($UserConsign->getError());
+                    }
+                } else {
+                    if ($redirct_url = I('redirct_url')) {
+                        cookie('redirct_url', U(base64_decode($redirct_url)));
+                    }
+                    $this->display('addressAdd');
+                }
+                break;
+            case '2':   //修改
+                if (empty($address_id)) {
+                    $this->error('非法参数...');
+                }
+                if (IS_POST) {
+                    $result = $UserConsign->update($this->user_info['user_id']);
+                    if ($result) {
+                        $this->success('成功', U('address'));
+                    } else {
+                        $this->error($UserConsign->getError());
+                    }
+                } else {
+                    $address_info = $UserConsign->where(array('address_id'=>$address_id))->find();
+                    $address_info['area'] = json_decode($address_info['area'], true);
+                    $this->assign('address_info', $address_info);
+                    $this->display('addressAdd');
+                }
+                break;
+            case '3':   //删除
+                if (empty($address_id)) {
+                    $this->error('非法参数...');
+                }
+                $result = $UserConsign->where(array('address_id'=>$address_id))->delete();
+                if ($result) {
+                    $this->success('成功', U('address'));
+                } else {
+                    $this->error('失败');
+                }
+                break;
+            case '4':   //设置默认
+                if (empty($address_id)) {
+                    $this->error('非法参数...');
+                }
+                $UserConsign->where(array('user_id'=>$this->user_info['user_id']))->setField('is_default', 0);
+                $result = $UserConsign->where(array('address_id'=>$address_id))->setField('is_default', 1);
+                if ($result) {
+                    $this->success('成功', U('address'));
+                } else {
+                    $this->error('失败');
+                }
+                break;
+            default:
+                $map = array(
+                    'user_id' => $this->user_info['user_id'],
+                    'status' => 1
+                );
+                $lists = $UserConsign->where($map)->select();
+                $this->assign('lists', $lists);
+                $this->display();
+                break;
         }
     }
 

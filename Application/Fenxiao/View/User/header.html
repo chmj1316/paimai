@@ -1,0 +1,36 @@
+<dl class="fix">
+    <dt>
+        <p onclick="syncUserInfo();">
+            <img src="{$user_info['user_avatar']}" alt="">
+            <em><a href="{:U('index')}" title=""><img src="__FENXIAO__jfsd/images/bg2.png" alt=""></a></em>
+        </p>
+        <span><a href="{:U('index')}" title="">{:get_fx_group($user_info['fx_group'], 'name')}</a></span>
+    </dt>
+    <dd>
+        会员ID ：{$user_info['user_id']}
+        <br /> 昵称 ：{$user_info['user_name']}
+        <br /> 推荐人：
+        <?php echo empty($user_info['fx_sup'])?'中华聚宝':get_shop_info($user_info['user_avatar'])?>
+        <a href="{:U('index')}" title=""><img src="__FENXIAO__jfsd/images/bg3.png" alt=""></a>
+    </dd>
+</dl>
+<script type="text/javascript">
+    var updateUserInfo = function() {
+        $.ajax({
+            url: '{:U('syncUserInfo')}',
+            type: 'post',
+            dataType: 'json',
+            success: function(res) {
+                if (res.status) {
+                    // alert(res.info)
+                    location.href = res.url
+                } else {
+                    alert(res.info)
+                }
+            },
+            error: function(){
+                alert('网络异常...')
+            }
+        })
+    }
+</script>

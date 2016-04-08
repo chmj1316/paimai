@@ -10,7 +10,7 @@ $(function(){
             $('.index_xf').slideUp(800);
         }
     })
-	
+
     //弹窗
     $('.zx1').height($(window).height());
     $('.tanchuang').click(function(){
@@ -23,14 +23,14 @@ $(function(){
         $('.tcdiv1').hide();
         $('.zx1').hide();
     })
-    
+
     //首页加载
-    $(window).scroll(function () {
-    	if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-    	alert('要加载的内容');
-    	
-    	}
-    });
+    // $(window).scroll(function () {
+    // 	if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+    // 	alert('要加载的内容');
+    //
+    // 	}
+    // });
 
     //加减
     $('.z_szanniu').click(function(){

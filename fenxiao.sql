@@ -41,10 +41,12 @@ CREATE TABLE IF NOT EXISTS `jfsd_fx_log` (
 CREATE TABLE IF NOT EXISTS `jfsd_fx_order` (
   `order_id` char(20) NOT NULL DEFAULT '' COMMENT '订单编号',
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '用户',
+  `address_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '收货地址id',
   `price` DOUBLE(9,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '价格',
   `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
   `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
   `order_info` text NOT NULL COMMENT '订单信息',
+  `pay_status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '支付状态',
   `status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '状态',
   PRIMARY KEY (`order_id`),
   KEY `user_id` (`user_id`),
